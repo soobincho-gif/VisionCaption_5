@@ -190,25 +190,26 @@ def _render_ablation_summary(
             for row in promotion_summary.get("baseline_vs_candidate_vs_final_default", [])
         ]
 
-    cards = ['<div class="stage-flow">']
+    columns = st.columns(min(4, max(1, len(ablation_rows))), gap="medium")
     for index, row in enumerate(ablation_rows, start=1):
         delta = row.get("delta_vs_prior_recall_at_1")
         delta_text = format_percent(delta) if delta is not None else "baseline"
         regressions = row.get("regressions_vs_prior")
         regression_text = "N/A" if regressions is None else str(regressions)
-        cards.append(
-            f"""
-            <div class="stage-card">
-              <div class="stage-number">{index}</div>
-              <div class="stage-title">{escape(truncate_text(str(row.get("system", "system")), 58))}</div>
-              <p><strong>Recall@1:</strong> {escape(format_percent(row.get("recall_at_1")))}</p>
-              <p><strong>Recall@3:</strong> {escape(format_percent(row.get("recall_at_3")))}</p>
-              <p><strong>Delta:</strong> {escape(delta_text)} · <strong>Regressions:</strong> {escape(regression_text)}</p>
-            </div>
-            """
-        )
-    cards.append("</div>")
-    st.markdown("".join(cards), unsafe_allow_html=True)
+        with columns[(index - 1) % len(columns)]:
+            st.markdown(
+                (
+                    f'<div class="stage-card">'
+                    f'<div class="stage-number">{index}</div>'
+                    f'<div class="stage-title">{escape(truncate_text(str(row.get("system", "system")), 58))}</div>'
+                    f'<p><strong>Recall@1:</strong> {escape(format_percent(row.get("recall_at_1")))}</p>'
+                    f'<p><strong>Recall@3:</strong> {escape(format_percent(row.get("recall_at_3")))}</p>'
+                    f'<p><strong>Delta:</strong> {escape(delta_text)} · '
+                    f'<strong>Regressions:</strong> {escape(regression_text)}</p>'
+                    "</div>"
+                ),
+                unsafe_allow_html=True,
+            )
 
 
 def _render_query_table(filtered_rows: Sequence[Mapping[str, Any]]) -> Mapping[str, Any] | None:
@@ -310,13 +311,13 @@ def _render_bucket_explorer(rows: Sequence[Mapping[str, Any]]) -> None:
     cards = ['<div class="bucket-grid">']
     for bucket, count in counts.items():
         cards.append(
-            f"""
-            <div class="bucket-card">
-              <div class="bucket-count">{count}</div>
-              <div class="bucket-label">{escape(humanize_key(bucket))}</div>
-              <p class="preview-note">Use the bucket filter above to inspect these cases.</p>
-            </div>
-            """
+            (
+                '<div class="bucket-card">'
+                f'<div class="bucket-count">{count}</div>'
+                f'<div class="bucket-label">{escape(humanize_key(bucket))}</div>'
+                '<p class="preview-note">Use the bucket filter above to inspect these cases.</p>'
+                "</div>"
+            )
         )
     cards.append("</div>")
     st.markdown("".join(cards), unsafe_allow_html=True)
@@ -329,15 +330,15 @@ def _render_query_evidence_cards(rows: Sequence[Mapping[str, Any]]) -> None:
         top_result = row.get("top_result") or (row.get("results") or [None])[0]
         status = _row_status(row)
         cards.append(
-            f"""
-            <div class="evidence-card">
-              <span class="status-badge {status}">{status}</span>
-              <h3>{escape(str(row.get("query_id", "query")))}</h3>
-              <p>{escape(truncate_text(str(row.get("query", "")), 116))}</p>
-              <p><strong>Expected:</strong> {escape(format_list(row.get("expected_image_ids", []), max_items=2))}</p>
-              <p><strong>Top-1:</strong> {escape(str(top_result.get("image_id") if top_result else "N/A"))}</p>
-            </div>
-            """
+            (
+                f'<div class="evidence-card">'
+                f'<span class="status-badge {status}">{status}</span>'
+                f'<h3>{escape(str(row.get("query_id", "query")))}</h3>'
+                f'<p>{escape(truncate_text(str(row.get("query", "")), 116))}</p>'
+                f'<p><strong>Expected:</strong> {escape(format_list(row.get("expected_image_ids", []), max_items=2))}</p>'
+                f'<p><strong>Top-1:</strong> {escape(str(top_result.get("image_id") if top_result else "N/A"))}</p>'
+                "</div>"
+            )
         )
     cards.append("</div>")
     st.markdown("".join(cards), unsafe_allow_html=True)
