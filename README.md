@@ -1,47 +1,42 @@
-# VisionCaption Portfolio UI
+# VisionCaption
 
-VisionCaption is an explainable image-retrieval project that compares three retrieval stages over frozen benchmark artifacts:
+Prompt-fidelity image retrieval for UI screenshots, historical chat interfaces, and mixed visual queries.
 
-- `baseline`: caption-only retrieval
-- `candidate`: caption + selected structured fields
-- `final default`: deterministic top-3 rerank with `question_paraphrase_overlap = 0.25`
+## Live Links
 
-The Streamlit app in this repo is built for portfolio demos and Streamlit Community Cloud deployment. It replays validated frozen artifacts instead of rebuilding embeddings during UI interactions, so the demo remains deterministic and offline-safe.
+- Live app: [visioncaption5.streamlit.app](https://visioncaption5.streamlit.app)
+- GitHub: [soobincho-gif/VisionCaption_5](https://github.com/soobincho-gif/VisionCaption_5)
 
-## Pages
+## Overview
 
-- `Overview`
-- `Live Demo`
-- `Benchmark Explorer`
-- `Method / Architecture`
+VisionCaption is a Streamlit portfolio app for an explainable text-to-image retrieval system. Instead of rebuilding embeddings during demos, it replays trusted frozen evaluation artifacts so the default experience stays deterministic, reproducible, and deployment-friendly.
 
-## Local Run
+The project focuses on prompts that are usually awkward for generic caption retrieval:
 
-Install dependencies, then run:
+- UI-heavy screenshots
+- historical chat-style interfaces
+- mixed prompts that combine visible text, entities, and layout cues
 
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
+## What The App Shows
 
-The app entrypoint is:
+- `Overview`: the retrieval story, promoted default, and headline metrics
+- `Live Demo`: frozen replay for benchmark queries, plus optional session-only image upload
+- `Benchmark Explorer`: query-level and slice-level benchmark inspection
+- `Method / Architecture`: representation, reranking, and artifact pipeline summary
 
-```text
-app.py
-```
+## Retrieval Stack
 
-## Deployment Notes
+The current promoted path has three stages:
 
-- Streamlit Community Cloud entrypoint: `app.py`
-- The UI expects the frozen artifacts already committed in `outputs/eval/`
-- Demo interactions do not require a network embedding rebuild
-- `.streamlit/config.toml` includes the app theme and server defaults
-- `.streamlit/secrets.toml` is optional for frozen replay mode
-- Upload, caption, and temporary embedding flows require `OPENAI_API_KEY`
+1. `baseline`: caption-only retrieval
+2. `candidate`: caption plus selected structured fields
+3. `final default`: deterministic top-3 rerank with `question_paraphrase_overlap = 0.25`
 
-## Current Validated Default Configuration
+This makes the system more faithful to UI wording and visible on-screen cues without hiding the evidence trail.
 
-Validated on April 10, 2026 from the trusted frozen mixed-sanity replay:
+## Current Validated Default
+
+Validated from the trusted frozen mixed-sanity replay on April 10, 2026:
 
 - representation mode: `caption_plus_selected_structured`
 - rerank: deterministic top-3 rerank
@@ -51,48 +46,70 @@ Validated on April 10, 2026 from the trusted frozen mixed-sanity replay:
 
 Validation caveat:
 
-- the broader default is evidence-backed from frozen artifact replay
-- a full end-to-end rebuild is still pending because a network connection error interrupted embedding rebuild
+- the promoted default is evidence-backed from frozen artifact replay
+- a full end-to-end rebuild is still pending because a prior network error interrupted embedding rebuild
 
-## Repo Structure
+## Local Run
+
+Install dependencies and start the app:
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Entrypoint:
 
 ```text
 app.py
-ui/
-  pages/
-  components/
-  utils/
-.streamlit/
-  config.toml
-requirements.txt
 ```
 
-## Streamlit Community Cloud Setup
+## Secrets
 
-1. Push this repository to GitHub.
-2. In Streamlit Community Cloud, create a new app from the repo.
-3. Set the main file path to `app.py`.
-4. In Advanced settings, keep Python at `3.12` unless you have a reason to change it.
-5. Optional: if you want upload and temporary caption/embed features, paste the contents of `.streamlit/secrets.toml.example` into the Secrets field after replacing the key value.
-6. Deploy without enabling any live rebuild path.
+Frozen replay mode does not require secrets.
 
-The portfolio app will boot directly from the checked-in frozen artifacts.
+`OPENAI_API_KEY` is only needed for features that generate new model output at runtime, such as:
 
-## Deploy Checklist
+- upload captioning
+- temporary upload embeddings
+- free-text query embedding outside frozen replay
 
-- Repository: `soobincho-gif/VisionCaption_5`
-- Branch: `main`
-- Entrypoint: `app.py`
-- Python: `3.12`
-- Secrets: optional for frozen replay, required only for upload/caption/embed flows
-- Dependency file: `requirements.txt`
-
-## Optional Local Secrets
-
-If you want to test the upload flow locally, create `.streamlit/secrets.toml` from the example file:
+For local testing, create `.streamlit/secrets.toml`:
 
 ```toml
 OPENAI_API_KEY = "sk-your-openai-key"
 ```
 
-Do not commit `.streamlit/secrets.toml`. The repository ignores it by default.
+Do not commit `.streamlit/secrets.toml`. The repository ignores it by default. See [.streamlit/secrets.toml.example](./.streamlit/secrets.toml.example).
+
+## Deployment
+
+This repository is set up for Streamlit Community Cloud.
+
+- repository: `soobincho-gif/VisionCaption_5`
+- branch: `main`
+- main file path: `app.py`
+- recommended Python: `3.12`
+- dependency file: `requirements.txt`
+
+The deployed app currently lives at [visioncaption5.streamlit.app](https://visioncaption5.streamlit.app).
+
+## Repo Layout
+
+```text
+app.py
+src/
+  services/
+  storage/
+  pipelines/
+  core/
+  config/
+ui/
+  pages/
+  components/
+  utils/
+data/
+outputs/
+.streamlit/
+requirements.txt
+```
