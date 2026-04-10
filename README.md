@@ -4,7 +4,7 @@ VisionCaption is an explainable image-retrieval app for UI screenshots, historic
 
 - GitHub: [soobincho-gif/VisionCaption_5](https://github.com/soobincho-gif/VisionCaption_5)
 - Streamlit: [visioncaption5.streamlit.app](https://visioncaption5.streamlit.app)
-- Submission notebook: [submission_package/실습4_조수빈.ipynb](submission_package/실습4_조수빈.ipynb)
+- Submission notebook: [submission_package/실습5_조수빈.ipynb](submission_package/실습5_조수빈.ipynb)
 
 ## Why This Project Exists
 
@@ -170,8 +170,7 @@ The repository includes a separate final submission package under [submission_pa
 
 Contents:
 
-- [submission_package/실습4_조수빈.ipynb](submission_package/실습4_조수빈.ipynb): polished Korean notebook with logic, process, outputs, screenshots, and example results
-- [submission_package/실습5_조수빈.ipynb](submission_package/실습5_조수빈.ipynb): same content saved under the alternate filename requested during preparation
+- [submission_package/실습5_조수빈.ipynb](submission_package/실습5_조수빈.ipynb): polished Korean notebook with logic, process, outputs, screenshots, and example results
 - `submission_package/assets/screenshots/`: execution screenshots used in the notebook
 - `submission_package/assets/sample_images/`: representative benchmark images used in the notebook examples
 - `submission_package/assets/diagrams/`: architecture diagram assets
@@ -269,7 +268,7 @@ assets/
   diagrams/               architecture assets
 submission_package/
   assets/                 notebook-ready screenshots, diagrams, sample images
-  실습4_조수빈.ipynb      polished final notebook
+  실습5_조수빈.ipynb      polished final notebook
 ```
 
 ## Limitations And Future Improvements
