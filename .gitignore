@@ -1,0 +1,14 @@
+.env
+.DS_Store
+__pycache__/
+*.pyc
+outputs/captions/*.jsonl
+outputs/embeddings/*.jsonl
+outputs/retrieval_results/*.jsonl
+outputs/local_search/
+data/local_photos/
+data/raw/
+outputs/eval/*
+!outputs/eval/**/
+!outputs/eval/**/*.json
+!outputs/eval/**/*.jsonl

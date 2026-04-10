@@ -1,0 +1,204 @@
+{
+  "benchmark_name": "prompt_fidelity_mixed_sanity_v1",
+  "benchmark_path": "data/samples/prompt_fidelity/benchmark_mixed_sanity_v1.json",
+  "experiment_setting": {
+    "name": "hard_best_caption_plus_selected_structured_top3_qpo025_v1",
+    "description": "Frozen hard-benchmark winner using caption_plus_selected_structured plus deterministic top-3 rerank with question_paraphrase_overlap=0.25.",
+    "representation_mode": "caption_plus_selected_structured",
+    "rerank_top_n": 3,
+    "rerank_weights": {
+      "exact_visible_text_overlap": 1.2,
+      "named_entity_match": 1.5,
+      "label_value_phrase_overlap": 2.0,
+      "component_cue_overlap": 1.3,
+      "question_paraphrase_overlap": 0.25,
+      "original_similarity": 0.25
+    },
+    "source_benchmark_path": "data/samples/prompt_fidelity/benchmark.json",
+    "known_hard_benchmark_metrics": {
+      "caption_only_recall_at_1": 0.6786,
+      "best_config_recall_at_1": 1.0,
+      "best_config_recall_at_3": 1.0,
+      "best_config_hard_negative_confusion_count": 0,
+      "best_config_regression_count": 0
+    }
+  },
+  "caption_path": "outputs/eval/structured_representation/captions.jsonl",
+  "query_count": 40,
+  "slice_counts": {
+    "hard_ui": 16,
+    "normal_ui": 12,
+    "photo_or_illustration": 12
+  },
+  "systems": {
+    "caption_only": {
+      "label": "caption_only",
+      "query_count": 40,
+      "correct_at_1_count": 0,
+      "correct_at_3_count": 0,
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "slice_metrics": {
+        "hard_ui": {
+          "query_count": 16,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0
+        },
+        "normal_ui": {
+          "query_count": 12,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0
+        },
+        "photo_or_illustration": {
+          "query_count": 12,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0
+        }
+      },
+      "artifact_path": "outputs/eval/hard_best_caption_plus_selected_structured_top3_qpo025_v1/mixed_sanity_v1_mq028_singleton_area_guard/control_candidate/caption_only/results.json"
+    },
+    "caption_plus_selected_structured": {
+      "label": "caption_plus_selected_structured",
+      "query_count": 40,
+      "correct_at_1_count": 0,
+      "correct_at_3_count": 0,
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "slice_metrics": {
+        "hard_ui": {
+          "query_count": 16,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0
+        },
+        "normal_ui": {
+          "query_count": 12,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0
+        },
+        "photo_or_illustration": {
+          "query_count": 12,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0
+        }
+      },
+      "artifact_path": "outputs/eval/hard_best_caption_plus_selected_structured_top3_qpo025_v1/mixed_sanity_v1_mq028_singleton_area_guard/control_candidate/caption_plus_selected_structured/results.json"
+    },
+    "caption_plus_selected_structured_plus_deterministic_top3_rerank": {
+      "label": "caption_plus_selected_structured + deterministic_top3_rerank",
+      "query_count": 40,
+      "correct_at_1_count": 0,
+      "correct_at_3_count": 0,
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "slice_metrics": {
+        "hard_ui": {
+          "query_count": 16,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0
+        },
+        "normal_ui": {
+          "query_count": 12,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0
+        },
+        "photo_or_illustration": {
+          "query_count": 12,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0
+        }
+      },
+      "artifact_path": "outputs/eval/hard_best_caption_plus_selected_structured_top3_qpo025_v1/mixed_sanity_v1_mq028_singleton_area_guard/candidate_rerank_no_paraphrase/results.json"
+    },
+    "best_hard_config": {
+      "label": "caption_plus_selected_structured + deterministic_top3_rerank + question_paraphrase_overlap=0.25",
+      "query_count": 40,
+      "correct_at_1_count": 0,
+      "correct_at_3_count": 0,
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "slice_metrics": {
+        "hard_ui": {
+          "query_count": 16,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0
+        },
+        "normal_ui": {
+          "query_count": 12,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0
+        },
+        "photo_or_illustration": {
+          "query_count": 12,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0
+        }
+      },
+      "artifact_path": "outputs/eval/hard_best_caption_plus_selected_structured_top3_qpo025_v1/mixed_sanity_v1_mq028_singleton_area_guard/candidate_rerank_with_paraphrase/results.json"
+    }
+  },
+  "ablation_rows": [
+    {
+      "system": "caption_only",
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "delta_vs_prior_recall_at_1": null,
+      "regressions_vs_prior": null
+    },
+    {
+      "system": "caption_plus_selected_structured",
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "delta_vs_prior_recall_at_1": 0.0,
+      "regressions_vs_prior": 0
+    },
+    {
+      "system": "caption_plus_selected_structured + deterministic_top3_rerank",
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "delta_vs_prior_recall_at_1": 0.0,
+      "regressions_vs_prior": 0
+    },
+    {
+      "system": "caption_plus_selected_structured + deterministic_top3_rerank + question_paraphrase_overlap=0.25",
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "delta_vs_prior_recall_at_1": 0.0,
+      "regressions_vs_prior": 0
+    }
+  ],
+  "notable_regressions": {
+    "candidate_vs_caption_only": [],
+    "best_config_vs_candidate": []
+  },
+  "cases_helped_by_paraphrase_overlap": [],
+  "cases_hurt_by_paraphrase_overlap": [],
+  "pairwise_deltas": {
+    "candidate_vs_caption_only": {
+      "improvements": [],
+      "regressions": []
+    },
+    "rerank_without_paraphrase_vs_candidate": {
+      "improvements": [],
+      "regressions": []
+    },
+    "best_config_vs_candidate": {
+      "improvements": [],
+      "regressions": []
+    },
+    "paraphrase_overlap_vs_no_paraphrase": {
+      "improvements": [],
+      "regressions": []
+    }
+  },
+  "recommendation": {
+    "decision": "keep_optional",
+    "rationale": "The broader sanity set did not show a clear enough benefit over the simpler candidate path to justify making the hard-benchmark winner the broader default."
+  },
+  "artifacts": {
+    "control_candidate_comparison_path": "outputs/eval/hard_best_caption_plus_selected_structured_top3_qpo025_v1/mixed_sanity_v1_mq028_singleton_area_guard/control_candidate/comparison.json",
+    "rerank_no_paraphrase_comparison_path": "outputs/eval/hard_best_caption_plus_selected_structured_top3_qpo025_v1/mixed_sanity_v1_mq028_singleton_area_guard/candidate_rerank_no_paraphrase/comparison.json",
+    "rerank_with_paraphrase_comparison_path": "outputs/eval/hard_best_caption_plus_selected_structured_top3_qpo025_v1/mixed_sanity_v1_mq028_singleton_area_guard/candidate_rerank_with_paraphrase/comparison.json",
+    "report_path": "outputs/eval/hard_best_caption_plus_selected_structured_top3_qpo025_v1/mixed_sanity_v1_mq028_singleton_area_guard/report.json",
+    "ablation_table_path": "outputs/eval/hard_best_caption_plus_selected_structured_top3_qpo025_v1/mixed_sanity_v1_mq028_singleton_area_guard/ablation_table.md"
+  }
+}

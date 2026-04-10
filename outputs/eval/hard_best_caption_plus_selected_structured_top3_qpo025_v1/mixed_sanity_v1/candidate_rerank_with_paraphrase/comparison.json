@@ -1,0 +1,91 @@
+{
+  "benchmark_name": "prompt_fidelity_mixed_sanity_v1",
+  "source_candidate_results_path": "outputs/eval/hard_best_caption_plus_selected_structured_top3_qpo025_v1/mixed_sanity_v1/control_candidate/caption_plus_selected_structured/results.json",
+  "source_control_results_path": "outputs/eval/hard_best_caption_plus_selected_structured_top3_qpo025_v1/mixed_sanity_v1/control_candidate/caption_only/results.json",
+  "caption_path": "outputs/eval/structured_representation/captions.jsonl",
+  "rerank_weights": {
+    "exact_visible_text_overlap": 1.2,
+    "named_entity_match": 1.5,
+    "label_value_phrase_overlap": 2.0,
+    "component_cue_overlap": 1.3,
+    "question_paraphrase_overlap": 0.25,
+    "original_similarity": 0.25
+  },
+  "control_reference": {
+    "recall_at_1": 0.675,
+    "recall_at_3": 1.0,
+    "hard_negative_confusion_count": 13,
+    "failure_bucket_counts": {
+      "same-family UI confusion": 0,
+      "person-name confusion": 10,
+      "visible-text confusion": 3,
+      "OCR/stylized text failure": 0,
+      "layout confusion": 0
+    }
+  },
+  "candidate_before": {
+    "recall_at_1": 0.875,
+    "recall_at_3": 1.0,
+    "hard_negative_confusion_count": 5,
+    "failure_bucket_counts": {
+      "same-family UI confusion": 0,
+      "person-name confusion": 2,
+      "visible-text confusion": 3,
+      "OCR/stylized text failure": 0,
+      "layout confusion": 0
+    }
+  },
+  "candidate_after": {
+    "recall_at_1": 1.0,
+    "recall_at_3": 1.0,
+    "hard_negative_confusion_count": 0,
+    "failure_bucket_counts": {
+      "same-family UI confusion": 0,
+      "person-name confusion": 0,
+      "visible-text confusion": 0,
+      "OCR/stylized text failure": 0,
+      "layout confusion": 0
+    }
+  },
+  "candidate_delta": {
+    "recall_at_1": 0.125,
+    "recall_at_3": 0.0,
+    "hard_negative_confusion_count": -5
+  },
+  "corrected_queries": [
+    "mq001_dashboard_dark_panels",
+    "mq003_dashboard_slider_file_sizes",
+    "mq009_einstein_reflective_opinion",
+    "mq010_einstein_discovery_paraphrase",
+    "mq017_dashboard_basic_dark_storytelling"
+  ],
+  "regressions": [],
+  "residual_query_outcomes": {},
+  "rerank_failure_analysis": {
+    "bucket_counts": {
+      "corrected_by_visible_text_overlap": 0,
+      "corrected_by_label_value_phrase_overlap": 3,
+      "corrected_by_entity_cue_overlap": 0,
+      "corrected_by_component_cue_overlap": 1,
+      "corrected_by_question_paraphrase_overlap": 1,
+      "still_unresolved": 0
+    },
+    "bucket_items": {
+      "corrected_by_visible_text_overlap": [],
+      "corrected_by_label_value_phrase_overlap": [
+        "mq001_dashboard_dark_panels",
+        "mq009_einstein_reflective_opinion",
+        "mq017_dashboard_basic_dark_storytelling"
+      ],
+      "corrected_by_entity_cue_overlap": [],
+      "corrected_by_component_cue_overlap": [
+        "mq003_dashboard_slider_file_sizes"
+      ],
+      "corrected_by_question_paraphrase_overlap": [
+        "mq010_einstein_discovery_paraphrase"
+      ],
+      "still_unresolved": []
+    }
+  },
+  "recommendation": "consider_default_after_broader_validation"
+}

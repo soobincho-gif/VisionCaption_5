@@ -1,0 +1,141 @@
+{
+  "benchmark_name": "prompt_fidelity_mixed_v2_hard",
+  "source_candidate_results_path": "outputs/eval/control_candidate_name_text_fidelity/caption_plus_selected_structured/results.json",
+  "source_control_results_path": "outputs/eval/control_candidate_name_text_fidelity/caption_only/results.json",
+  "caption_path": "outputs/eval/structured_representation/captions.jsonl",
+  "rerank_weights": {
+    "exact_visible_text_overlap": 1.2,
+    "named_entity_match": 1.5,
+    "label_value_phrase_overlap": 2.0,
+    "component_cue_overlap": 1.3,
+    "question_paraphrase_overlap": 0.25,
+    "original_similarity": 0.25
+  },
+  "control_reference": {
+    "recall_at_1": 0.6785714285714286,
+    "recall_at_3": 1.0,
+    "hard_negative_confusion_count": 9,
+    "failure_bucket_counts": {
+      "same-family UI confusion": 0,
+      "person-name confusion": 7,
+      "visible-text confusion": 2,
+      "OCR/stylized text failure": 0,
+      "layout confusion": 0
+    }
+  },
+  "candidate_before": {
+    "recall_at_1": 0.8571428571428571,
+    "recall_at_3": 1.0,
+    "hard_negative_confusion_count": 4,
+    "failure_bucket_counts": {
+      "same-family UI confusion": 0,
+      "person-name confusion": 2,
+      "visible-text confusion": 2,
+      "OCR/stylized text failure": 0,
+      "layout confusion": 0
+    }
+  },
+  "candidate_after": {
+    "recall_at_1": 1.0,
+    "recall_at_3": 1.0,
+    "hard_negative_confusion_count": 0,
+    "failure_bucket_counts": {
+      "same-family UI confusion": 0,
+      "person-name confusion": 0,
+      "visible-text confusion": 0,
+      "OCR/stylized text failure": 0,
+      "layout confusion": 0
+    }
+  },
+  "candidate_delta": {
+    "recall_at_1": 0.1428571428571429,
+    "recall_at_3": 0.0,
+    "hard_negative_confusion_count": -4
+  },
+  "corrected_queries": [
+    "q010_dashboard_dark_panels",
+    "q012_dashboard_slider_file_sizes",
+    "q020_einstein_reflective_opinion",
+    "q021_einstein_discovery_paraphrase"
+  ],
+  "regressions": [],
+  "residual_query_outcomes": {
+    "q010_dashboard_dark_panels": {
+      "query": "dark dashboard for visual storytelling from images and sentiment with file list, controls, image descriptions, and pipeline status",
+      "activated": true,
+      "activation_reasons": [
+        "label_value_phrase_overlap",
+        "component_cue_overlap"
+      ],
+      "corrected": true,
+      "regression": false,
+      "before_top_image_id": "visual_storytelling_mobile",
+      "after_top_image_id": "visual_storytelling_dashboard",
+      "primary_rerank_driver": "label_value_phrase_overlap"
+    },
+    "q012_dashboard_slider_file_sizes": {
+      "query": "desktop storytelling dashboard with file sizes, happy sad suspenseful radio buttons, max sentences slider, and orange Generate Story button",
+      "activated": true,
+      "activation_reasons": [
+        "component_cue_overlap",
+        "exact_visible_text_overlap"
+      ],
+      "corrected": true,
+      "regression": false,
+      "before_top_image_id": "visual_storytelling_mobile",
+      "after_top_image_id": "visual_storytelling_dashboard",
+      "primary_rerank_driver": "component_cue_overlap"
+    },
+    "q020_einstein_reflective_opinion": {
+      "query": "Einstein historical salon screen with question type philosophical and answer mode reflective opinion",
+      "activated": true,
+      "activation_reasons": [
+        "label_value_phrase_overlap",
+        "exact_visible_text_overlap"
+      ],
+      "corrected": true,
+      "regression": false,
+      "before_top_image_id": "history_chat_einstein_ai",
+      "after_top_image_id": "history_chat_einstein_philosophical",
+      "primary_rerank_driver": "label_value_phrase_overlap"
+    },
+    "q021_einstein_discovery_paraphrase": {
+      "query": "beige editorial AI chat about imagination and discovery rather than AI today",
+      "activated": true,
+      "activation_reasons": [
+        "question_paraphrase_overlap"
+      ],
+      "corrected": true,
+      "regression": false,
+      "before_top_image_id": "history_chat_einstein_ai",
+      "after_top_image_id": "history_chat_einstein_philosophical",
+      "primary_rerank_driver": "question_paraphrase_overlap"
+    }
+  },
+  "rerank_failure_analysis": {
+    "bucket_counts": {
+      "corrected_by_visible_text_overlap": 0,
+      "corrected_by_label_value_phrase_overlap": 2,
+      "corrected_by_entity_cue_overlap": 0,
+      "corrected_by_component_cue_overlap": 1,
+      "corrected_by_question_paraphrase_overlap": 1,
+      "still_unresolved": 0
+    },
+    "bucket_items": {
+      "corrected_by_visible_text_overlap": [],
+      "corrected_by_label_value_phrase_overlap": [
+        "q010_dashboard_dark_panels",
+        "q020_einstein_reflective_opinion"
+      ],
+      "corrected_by_entity_cue_overlap": [],
+      "corrected_by_component_cue_overlap": [
+        "q012_dashboard_slider_file_sizes"
+      ],
+      "corrected_by_question_paraphrase_overlap": [
+        "q021_einstein_discovery_paraphrase"
+      ],
+      "still_unresolved": []
+    }
+  },
+  "recommendation": "consider_default_after_broader_validation"
+}

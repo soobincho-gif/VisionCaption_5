@@ -1,0 +1,66 @@
+{
+  "experiment_setting_name": "hard_best_caption_plus_selected_structured_top3_qpo025_v1",
+  "promotion_status": "broader_default",
+  "promotion_note": "Promoted as the broader evaluation default on 2026-04-10 after the trusted frozen-artifact replay validated caption_plus_selected_structured plus deterministic top-3 rerank with question_paraphrase_overlap=0.25 and the singleton low-signal container guard enabled.",
+  "default_configuration": {
+    "representation_mode": "caption_plus_selected_structured",
+    "rerank": "deterministic_top3_rerank",
+    "rerank_top_n": 3,
+    "question_paraphrase_overlap": 0.25,
+    "singleton_low_signal_container_guard_enabled": true
+  },
+  "baseline_vs_candidate_vs_final_default": [
+    {
+      "system": "caption_only",
+      "role": "baseline",
+      "hard_benchmark": {
+        "recall_at_1": 0.6786,
+        "recall_at_3": 1.0,
+        "hard_negative_confusion_count": 9
+      },
+      "mixed_sanity": {
+        "recall_at_1": 0.675,
+        "recall_at_3": 1.0
+      }
+    },
+    {
+      "system": "caption_plus_selected_structured",
+      "role": "candidate",
+      "hard_benchmark": {
+        "recall_at_1": 0.8571,
+        "recall_at_3": 1.0,
+        "hard_negative_confusion_count": 4
+      },
+      "mixed_sanity": {
+        "recall_at_1": 0.875,
+        "recall_at_3": 1.0
+      }
+    },
+    {
+      "system": "caption_plus_selected_structured + deterministic_top3_rerank + question_paraphrase_overlap=0.25",
+      "role": "final_default",
+      "hard_benchmark": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "hard_negative_confusion_count": 0,
+        "regression_count": 0
+      },
+      "mixed_sanity": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0
+      }
+    }
+  ],
+  "hard_benchmark_result": {
+    "recall_at_1": 1.0,
+    "recall_at_3": 1.0,
+    "regression_count": 0
+  },
+  "mixed_sanity_result": {
+    "recall_at_1": 1.0,
+    "recall_at_3": 1.0,
+    "regression_count": 0,
+    "execution_mode": "frozen_artifact_replay_based"
+  },
+  "validation_caveat": "Frozen-artifact replay over the trusted mixed-sanity control/candidate artifacts validated the broader default at Recall@1 = 1.0000 and Recall@3 = 1.0000 with no regressions. A full end-to-end rebuild is still pending because a network Connection error interrupted the embedding rebuild."
+}

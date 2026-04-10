@@ -1,0 +1,2377 @@
+{
+  "embedding_summary": {
+    "status": "completed",
+    "captions_available": 12,
+    "captions_skipped_existing": 0,
+    "captions_selected_for_run": 12,
+    "embeddings_written": 12,
+    "embedding_dimensions": 1536,
+    "caption_input_path": "outputs/eval/structured_representation/captions.jsonl",
+    "embedding_output_path": "outputs/eval/control_candidate_name_text_fidelity/caption_only/embeddings.jsonl",
+    "model_name": "text-embedding-3-small",
+    "representation_mode": "caption_only",
+    "errors": []
+  },
+  "recall_at_1": 0.6785714285714286,
+  "recall_at_3": 1.0,
+  "mean_top1_margin": 0.11972631298460469,
+  "tag_specific_accuracy": {
+    "hard_negative": {
+      "query_count": 19,
+      "recall_at_1": 0.5263157894736842,
+      "recall_at_3": 1.0,
+      "mean_top1_margin": 0.028348006695250984
+    },
+    "illustration_style": {
+      "query_count": 2,
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "mean_top1_margin": 0.30327993514631857
+    },
+    "layout_structure": {
+      "query_count": 11,
+      "recall_at_1": 0.6363636363636364,
+      "recall_at_3": 1.0,
+      "mean_top1_margin": 0.02863000590473355
+    },
+    "paraphrase": {
+      "query_count": 8,
+      "recall_at_1": 0.875,
+      "recall_at_3": 1.0,
+      "mean_top1_margin": 0.1656170447794288
+    },
+    "partial_cue": {
+      "query_count": 11,
+      "recall_at_1": 0.8181818181818182,
+      "recall_at_3": 1.0,
+      "mean_top1_margin": 0.18184035304982613
+    },
+    "person_name": {
+      "query_count": 13,
+      "recall_at_1": 0.46153846153846156,
+      "recall_at_3": 1.0,
+      "mean_top1_margin": 0.02681771694564589
+    },
+    "photo_scene": {
+      "query_count": 7,
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "mean_top1_margin": 0.31530925229521795
+    },
+    "ui_family_disambiguation": {
+      "query_count": 19,
+      "recall_at_1": 0.5263157894736842,
+      "recall_at_3": 1.0,
+      "mean_top1_margin": 0.028348006695250984
+    },
+    "visible_text": {
+      "query_count": 19,
+      "recall_at_1": 0.5263157894736842,
+      "recall_at_3": 1.0,
+      "mean_top1_margin": 0.07550852995919059
+    }
+  },
+  "family_confusion_accuracy": {
+    "query_count": 19,
+    "recall_at_1": 0.5263157894736842,
+    "recall_at_3": 1.0,
+    "mean_top1_margin": 0.028348006695250984,
+    "hard_negative_confusion_count": 9,
+    "query_details": [
+      {
+        "query_id": "q010_dashboard_dark_panels",
+        "query": "dark dashboard for visual storytelling from images and sentiment with file list, controls, image descriptions, and pipeline status",
+        "tags": [
+          "ui_family_disambiguation",
+          "layout_structure",
+          "visible_text",
+          "hard_negative"
+        ],
+        "expected_image_id": "visual_storytelling_dashboard",
+        "expected_family": "visual_storytelling",
+        "hard_negative_image_ids": [
+          "visual_storytelling_mobile"
+        ],
+        "top_result": {
+          "query_text": "dark dashboard for visual storytelling from images and sentiment with file list, controls, image descriptions, and pipeline status",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.6636470898428298,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:36.609921Z"
+        },
+        "second_result": {
+          "query_text": "dark dashboard for visual storytelling from images and sentiment with file list, controls, image descriptions, and pipeline status",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.6482584276529809,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:36.609933Z"
+        },
+        "top1_correct": true,
+        "top1_margin": 0.015388662189848912,
+        "confused_with_hard_negative": false
+      },
+      {
+        "query_id": "q011_dashboard_analysis_panels",
+        "query": "dark visual storytelling UI with uploaded file list, scene observations, unresolved ambiguities, evaluator summary, and compliance scores",
+        "tags": [
+          "ui_family_disambiguation",
+          "visible_text",
+          "layout_structure",
+          "partial_cue",
+          "hard_negative"
+        ],
+        "expected_image_id": "visual_storytelling_dashboard",
+        "expected_family": "visual_storytelling",
+        "hard_negative_image_ids": [
+          "visual_storytelling_mobile"
+        ],
+        "top_result": {
+          "query_text": "dark visual storytelling UI with uploaded file list, scene observations, unresolved ambiguities, evaluator summary, and compliance scores",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.6608419370212723,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:36.931882Z"
+        },
+        "second_result": {
+          "query_text": "dark visual storytelling UI with uploaded file list, scene observations, unresolved ambiguities, evaluator summary, and compliance scores",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.6078857428086626,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:36.931889Z"
+        },
+        "top1_correct": true,
+        "top1_margin": 0.052956194212609664,
+        "confused_with_hard_negative": false
+      },
+      {
+        "query_id": "q012_dashboard_slider_file_sizes",
+        "query": "desktop storytelling dashboard with file sizes, happy sad suspenseful radio buttons, max sentences slider, and orange Generate Story button",
+        "tags": [
+          "ui_family_disambiguation",
+          "visible_text",
+          "layout_structure",
+          "partial_cue",
+          "hard_negative"
+        ],
+        "expected_image_id": "visual_storytelling_dashboard",
+        "expected_family": "visual_storytelling",
+        "hard_negative_image_ids": [
+          "visual_storytelling_mobile"
+        ],
+        "top_result": {
+          "query_text": "desktop storytelling dashboard with file sizes, happy sad suspenseful radio buttons, max sentences slider, and orange Generate Story button",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.6599775779004599,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:37.147451Z"
+        },
+        "second_result": {
+          "query_text": "desktop storytelling dashboard with file sizes, happy sad suspenseful radio buttons, max sentences slider, and orange Generate Story button",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.6310520088632653,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:37.147458Z"
+        },
+        "top1_correct": false,
+        "top1_margin": 0.028925569037194565,
+        "confused_with_hard_negative": true
+      },
+      {
+        "query_id": "q013_mobile_stacked_cards",
+        "query": "mobile landing page for visual storytelling from sentiment with stacked beige cards and orange buttons",
+        "tags": [
+          "ui_family_disambiguation",
+          "layout_structure",
+          "paraphrase",
+          "hard_negative"
+        ],
+        "expected_image_id": "visual_storytelling_mobile",
+        "expected_family": "visual_storytelling",
+        "hard_negative_image_ids": [
+          "visual_storytelling_dashboard"
+        ],
+        "top_result": {
+          "query_text": "mobile landing page for visual storytelling from sentiment with stacked beige cards and orange buttons",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.6046373319573274,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:37.480869Z"
+        },
+        "second_result": {
+          "query_text": "mobile landing page for visual storytelling from sentiment with stacked beige cards and orange buttons",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.5600655526296321,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:37.480874Z"
+        },
+        "top1_correct": true,
+        "top1_margin": 0.04457177932769529,
+        "confused_with_hard_negative": false
+      },
+      {
+        "query_id": "q014_mobile_awaiting_sequence",
+        "query": "vertical beige interface with AWAITING IMAGE SEQUENCE and Your story will appear here",
+        "tags": [
+          "ui_family_disambiguation",
+          "visible_text",
+          "layout_structure",
+          "hard_negative"
+        ],
+        "expected_image_id": "visual_storytelling_mobile",
+        "expected_family": "visual_storytelling",
+        "hard_negative_image_ids": [
+          "visual_storytelling_dashboard"
+        ],
+        "top_result": {
+          "query_text": "vertical beige interface with AWAITING IMAGE SEQUENCE and Your story will appear here",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.5318414338519118,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:37.809872Z"
+        },
+        "second_result": {
+          "query_text": "vertical beige interface with AWAITING IMAGE SEQUENCE and Your story will appear here",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.5043024035966968,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:37.809879Z"
+        },
+        "top1_correct": false,
+        "top1_margin": 0.02753903025521509,
+        "confused_with_hard_negative": true
+      },
+      {
+        "query_id": "q015_mobile_drop_file",
+        "query": "soft beige mobile panel with Drop File Here, Click to Upload, Story follows image order, and sequence preview",
+        "tags": [
+          "ui_family_disambiguation",
+          "visible_text",
+          "layout_structure",
+          "partial_cue",
+          "hard_negative"
+        ],
+        "expected_image_id": "visual_storytelling_mobile",
+        "expected_family": "visual_storytelling",
+        "hard_negative_image_ids": [
+          "visual_storytelling_dashboard"
+        ],
+        "top_result": {
+          "query_text": "soft beige mobile panel with Drop File Here, Click to Upload, Story follows image order, and sequence preview",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.5411336340940369,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:37.994468Z"
+        },
+        "second_result": {
+          "query_text": "soft beige mobile panel with Drop File Here, Click to Upload, Story follows image order, and sequence preview",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.5205330622002283,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:37.994474Z"
+        },
+        "top1_correct": true,
+        "top1_margin": 0.020600571893808595,
+        "confused_with_hard_negative": false
+      },
+      {
+        "query_id": "q016_einstein_ai_today",
+        "query": "historical salon interface with Albert Einstein discussing AI today and responsibility",
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "hard_negative"
+        ],
+        "expected_image_id": "history_chat_einstein_ai",
+        "expected_family": "historical_salon",
+        "hard_negative_image_ids": [
+          "history_chat_einstein_philosophical",
+          "history_chat_cleopatra_landing",
+          "history_chat_cleopatra_diplomacy"
+        ],
+        "top_result": {
+          "query_text": "historical salon interface with Albert Einstein discussing AI today and responsibility",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.6678927437498053,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:38.187902Z"
+        },
+        "second_result": {
+          "query_text": "historical salon interface with Albert Einstein discussing AI today and responsibility",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.6624169947284705,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:38.187908Z"
+        },
+        "top1_correct": true,
+        "top1_margin": 0.0054757490213348525,
+        "confused_with_hard_negative": false
+      },
+      {
+        "query_id": "q017_einstein_posthumous_current_events",
+        "query": "Albert Einstein interface where the latest pipeline result says posthumous current events and cautious historical projection",
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "layout_structure",
+          "hard_negative"
+        ],
+        "expected_image_id": "history_chat_einstein_ai",
+        "expected_family": "historical_salon",
+        "hard_negative_image_ids": [
+          "history_chat_einstein_philosophical",
+          "history_chat_cleopatra_landing",
+          "history_chat_cleopatra_diplomacy"
+        ],
+        "top_result": {
+          "query_text": "Albert Einstein interface where the latest pipeline result says posthumous current events and cautious historical projection",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.5741641503619946,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:38.516153Z"
+        },
+        "second_result": {
+          "query_text": "Albert Einstein interface where the latest pipeline result says posthumous current events and cautious historical projection",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.5556976186598742,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:38.516159Z"
+        },
+        "top1_correct": true,
+        "top1_margin": 0.018466531702120426,
+        "confused_with_hard_negative": false
+      },
+      {
+        "query_id": "q018_einstein_ai_question_text",
+        "query": "historical salon screenshot asking What do you think about AI today? with Einstein answering cautiously",
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "paraphrase",
+          "hard_negative"
+        ],
+        "expected_image_id": "history_chat_einstein_ai",
+        "expected_family": "historical_salon",
+        "hard_negative_image_ids": [
+          "history_chat_einstein_philosophical",
+          "history_chat_cleopatra_landing",
+          "history_chat_cleopatra_diplomacy"
+        ],
+        "top_result": {
+          "query_text": "historical salon screenshot asking What do you think about AI today? with Einstein answering cautiously",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.6282107269402687,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:38.701554Z"
+        },
+        "second_result": {
+          "query_text": "historical salon screenshot asking What do you think about AI today? with Einstein answering cautiously",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.5962040777417712,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:38.701560Z"
+        },
+        "top1_correct": false,
+        "top1_margin": 0.032006649198497494,
+        "confused_with_hard_negative": true
+      },
+      {
+        "query_id": "q019_einstein_discovery_question",
+        "query": "Albert Einstein interface answering What matters most in discovery?",
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "hard_negative"
+        ],
+        "expected_image_id": "history_chat_einstein_philosophical",
+        "expected_family": "historical_salon",
+        "hard_negative_image_ids": [
+          "history_chat_einstein_ai",
+          "history_chat_cleopatra_landing",
+          "history_chat_cleopatra_diplomacy"
+        ],
+        "top_result": {
+          "query_text": "Albert Einstein interface answering What matters most in discovery?",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.5536895873982762,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:38.911461Z"
+        },
+        "second_result": {
+          "query_text": "Albert Einstein interface answering What matters most in discovery?",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.5317394310223615,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:38.911467Z"
+        },
+        "top1_correct": false,
+        "top1_margin": 0.021950156375914687,
+        "confused_with_hard_negative": true
+      },
+      {
+        "query_id": "q020_einstein_reflective_opinion",
+        "query": "Einstein historical salon screen with question type philosophical and answer mode reflective opinion",
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "layout_structure",
+          "hard_negative"
+        ],
+        "expected_image_id": "history_chat_einstein_philosophical",
+        "expected_family": "historical_salon",
+        "hard_negative_image_ids": [
+          "history_chat_einstein_ai",
+          "history_chat_cleopatra_landing",
+          "history_chat_cleopatra_diplomacy"
+        ],
+        "top_result": {
+          "query_text": "Einstein historical salon screen with question type philosophical and answer mode reflective opinion",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.6203551777729609,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:39.126754Z"
+        },
+        "second_result": {
+          "query_text": "Einstein historical salon screen with question type philosophical and answer mode reflective opinion",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.6181140151378023,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:39.126761Z"
+        },
+        "top1_correct": true,
+        "top1_margin": 0.002241162635158611,
+        "confused_with_hard_negative": false
+      },
+      {
+        "query_id": "q021_einstein_discovery_paraphrase",
+        "query": "beige editorial AI chat about imagination and discovery rather than AI today",
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "paraphrase",
+          "hard_negative"
+        ],
+        "expected_image_id": "history_chat_einstein_philosophical",
+        "expected_family": "historical_salon",
+        "hard_negative_image_ids": [
+          "history_chat_einstein_ai",
+          "history_chat_cleopatra_landing",
+          "history_chat_cleopatra_diplomacy"
+        ],
+        "top_result": {
+          "query_text": "beige editorial AI chat about imagination and discovery rather than AI today",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.505185647208803,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:39.440730Z"
+        },
+        "second_result": {
+          "query_text": "beige editorial AI chat about imagination and discovery rather than AI today",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.49585731010315137,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:39.440739Z"
+        },
+        "top1_correct": true,
+        "top1_margin": 0.009328337105651618,
+        "confused_with_hard_negative": false
+      },
+      {
+        "query_id": "q022_cleopatra_landing_empty_transcript",
+        "query": "Cleopatra VII landing page with Converse with a historical mind not a costume and an empty conversation transcript",
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "layout_structure",
+          "hard_negative"
+        ],
+        "expected_image_id": "history_chat_cleopatra_landing",
+        "expected_family": "historical_salon",
+        "hard_negative_image_ids": [
+          "history_chat_cleopatra_diplomacy",
+          "history_chat_einstein_ai",
+          "history_chat_einstein_philosophical"
+        ],
+        "top_result": {
+          "query_text": "Cleopatra VII landing page with Converse with a historical mind not a costume and an empty conversation transcript",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.6442966400334215,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:39.636015Z"
+        },
+        "second_result": {
+          "query_text": "Cleopatra VII landing page with Converse with a historical mind not a costume and an empty conversation transcript",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.6208598717018243,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:39.636022Z"
+        },
+        "top1_correct": false,
+        "top1_margin": 0.023436768331597135,
+        "confused_with_hard_negative": true
+      },
+      {
+        "query_id": "q023_cleopatra_landing_cards",
+        "query": "historical salon startup screen for Cleopatra with 5-stage, Generate Verify, Multi-turn cards and no transcript yet",
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "layout_structure",
+          "hard_negative"
+        ],
+        "expected_image_id": "history_chat_cleopatra_landing",
+        "expected_family": "historical_salon",
+        "hard_negative_image_ids": [
+          "history_chat_cleopatra_diplomacy",
+          "history_chat_einstein_ai",
+          "history_chat_einstein_philosophical"
+        ],
+        "top_result": {
+          "query_text": "historical salon startup screen for Cleopatra with 5-stage, Generate Verify, Multi-turn cards and no transcript yet",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.5017721469699112,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:39.831657Z"
+        },
+        "second_result": {
+          "query_text": "historical salon startup screen for Cleopatra with 5-stage, Generate Verify, Multi-turn cards and no transcript yet",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.48750859326741786,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:39.831663Z"
+        },
+        "top1_correct": false,
+        "top1_margin": 0.014263553702493381,
+        "confused_with_hard_negative": true
+      },
+      {
+        "query_id": "q024_cleopatra_landing_starter_prompts",
+        "query": "Cleopatra interface with starter prompts about durable under pressure, image and power, and diplomacy before force",
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "partial_cue",
+          "hard_negative"
+        ],
+        "expected_image_id": "history_chat_cleopatra_landing",
+        "expected_family": "historical_salon",
+        "hard_negative_image_ids": [
+          "history_chat_cleopatra_diplomacy",
+          "history_chat_einstein_ai",
+          "history_chat_einstein_philosophical"
+        ],
+        "top_result": {
+          "query_text": "Cleopatra interface with starter prompts about durable under pressure, image and power, and diplomacy before force",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.6826540427594361,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:40.030851Z"
+        },
+        "second_result": {
+          "query_text": "Cleopatra interface with starter prompts about durable under pressure, image and power, and diplomacy before force",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.6438150816080517,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:40.030856Z"
+        },
+        "top1_correct": true,
+        "top1_margin": 0.03883896115138441,
+        "confused_with_hard_negative": false
+      },
+      {
+        "query_id": "q025_cleopatra_diplomacy_transcript",
+        "query": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "hard_negative"
+        ],
+        "expected_image_id": "history_chat_cleopatra_diplomacy",
+        "expected_family": "historical_salon",
+        "hard_negative_image_ids": [
+          "history_chat_cleopatra_landing",
+          "history_chat_einstein_ai",
+          "history_chat_einstein_philosophical"
+        ],
+        "top_result": {
+          "query_text": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.6664838925841733,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:40.365791Z"
+        },
+        "second_result": {
+          "query_text": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.6508442025091457,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:40.365796Z"
+        },
+        "top1_correct": false,
+        "top1_margin": 0.015639690075027635,
+        "confused_with_hard_negative": true
+      },
+      {
+        "query_id": "q026_cleopatra_before_force",
+        "query": "Cleopatra transcript answering What should diplomacy achieve before force is used?",
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "hard_negative"
+        ],
+        "expected_image_id": "history_chat_cleopatra_diplomacy",
+        "expected_family": "historical_salon",
+        "hard_negative_image_ids": [
+          "history_chat_cleopatra_landing",
+          "history_chat_einstein_ai",
+          "history_chat_einstein_philosophical"
+        ],
+        "top_result": {
+          "query_text": "Cleopatra transcript answering What should diplomacy achieve before force is used?",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.4841268482851448,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:40.551331Z"
+        },
+        "second_result": {
+          "query_text": "Cleopatra transcript answering What should diplomacy achieve before force is used?",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.46166304315341167,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:40.551338Z"
+        },
+        "top1_correct": false,
+        "top1_margin": 0.022463805131733128,
+        "confused_with_hard_negative": true
+      },
+      {
+        "query_id": "q027_cleopatra_statecraft_tags",
+        "query": "Cleopatra dossier with Leadership, Power, Diplomacy, Statecraft and a long answer about diplomacy before force",
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "partial_cue",
+          "hard_negative"
+        ],
+        "expected_image_id": "history_chat_cleopatra_diplomacy",
+        "expected_family": "historical_salon",
+        "hard_negative_image_ids": [
+          "history_chat_cleopatra_landing",
+          "history_chat_einstein_ai",
+          "history_chat_einstein_philosophical"
+        ],
+        "top_result": {
+          "query_text": "Cleopatra dossier with Leadership, Power, Diplomacy, Statecraft and a long answer about diplomacy before force",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.6138543520289115,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:40.786797Z"
+        },
+        "second_result": {
+          "query_text": "Cleopatra dossier with Leadership, Power, Diplomacy, Statecraft and a long answer about diplomacy before force",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.5358756378307556,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:40.786804Z"
+        },
+        "top1_correct": false,
+        "top1_margin": 0.07797871419815583,
+        "confused_with_hard_negative": true
+      },
+      {
+        "query_id": "q028_cleopatra_transcript_not_landing",
+        "query": "soft beige transcript app with Cleopatra giving a detailed diplomatic answer rather than a landing screen",
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "layout_structure",
+          "paraphrase",
+          "hard_negative"
+        ],
+        "expected_image_id": "history_chat_cleopatra_diplomacy",
+        "expected_family": "historical_salon",
+        "hard_negative_image_ids": [
+          "history_chat_cleopatra_landing",
+          "history_chat_einstein_ai",
+          "history_chat_einstein_philosophical"
+        ],
+        "top_result": {
+          "query_text": "soft beige transcript app with Cleopatra giving a detailed diplomatic answer rather than a landing screen",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.5765289099511438,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:41.114471Z"
+        },
+        "second_result": {
+          "query_text": "soft beige transcript app with Cleopatra giving a detailed diplomatic answer rather than a landing screen",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.5099886682868164,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:41.114478Z"
+        },
+        "top1_correct": true,
+        "top1_margin": 0.06654024166432737,
+        "confused_with_hard_negative": false
+      }
+    ]
+  },
+  "qualitative_error_buckets": {
+    "count": 9,
+    "bucket_counts": {
+      "same-family UI confusion": 0,
+      "person-name confusion": 7,
+      "visible-text confusion": 2,
+      "OCR/stylized text failure": 0,
+      "layout confusion": 0
+    },
+    "items": [
+      {
+        "query_id": "q012_dashboard_slider_file_sizes",
+        "query": "desktop storytelling dashboard with file sizes, happy sad suspenseful radio buttons, max sentences slider, and orange Generate Story button",
+        "expected_image_ids": [
+          "visual_storytelling_dashboard"
+        ],
+        "tags": [
+          "ui_family_disambiguation",
+          "visible_text",
+          "layout_structure",
+          "partial_cue",
+          "hard_negative"
+        ],
+        "hard_negative_image_ids": [
+          "visual_storytelling_mobile"
+        ],
+        "error_bucket": "visible-text confusion",
+        "top_results": [
+          {
+            "query_text": "desktop storytelling dashboard with file sizes, happy sad suspenseful radio buttons, max sentences slider, and orange Generate Story button",
+            "image_id": "visual_storytelling_mobile",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+            "similarity_score": 0.6599775779004599,
+            "rank": 1,
+            "created_at": "2026-04-10T00:38:37.147451Z"
+          },
+          {
+            "query_text": "desktop storytelling dashboard with file sizes, happy sad suspenseful radio buttons, max sentences slider, and orange Generate Story button",
+            "image_id": "visual_storytelling_dashboard",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+            "similarity_score": 0.6310520088632653,
+            "rank": 2,
+            "created_at": "2026-04-10T00:38:37.147458Z"
+          },
+          {
+            "query_text": "desktop storytelling dashboard with file sizes, happy sad suspenseful radio buttons, max sentences slider, and orange Generate Story button",
+            "image_id": "history_chat_einstein_philosophical",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+            "similarity_score": 0.3878963995095175,
+            "rank": 3,
+            "created_at": "2026-04-10T00:38:37.147461Z"
+          }
+        ]
+      },
+      {
+        "query_id": "q014_mobile_awaiting_sequence",
+        "query": "vertical beige interface with AWAITING IMAGE SEQUENCE and Your story will appear here",
+        "expected_image_ids": [
+          "visual_storytelling_mobile"
+        ],
+        "tags": [
+          "ui_family_disambiguation",
+          "visible_text",
+          "layout_structure",
+          "hard_negative"
+        ],
+        "hard_negative_image_ids": [
+          "visual_storytelling_dashboard"
+        ],
+        "error_bucket": "visible-text confusion",
+        "top_results": [
+          {
+            "query_text": "vertical beige interface with AWAITING IMAGE SEQUENCE and Your story will appear here",
+            "image_id": "visual_storytelling_dashboard",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+            "similarity_score": 0.5318414338519118,
+            "rank": 1,
+            "created_at": "2026-04-10T00:38:37.809872Z"
+          },
+          {
+            "query_text": "vertical beige interface with AWAITING IMAGE SEQUENCE and Your story will appear here",
+            "image_id": "visual_storytelling_mobile",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+            "similarity_score": 0.5043024035966968,
+            "rank": 2,
+            "created_at": "2026-04-10T00:38:37.809879Z"
+          },
+          {
+            "query_text": "vertical beige interface with AWAITING IMAGE SEQUENCE and Your story will appear here",
+            "image_id": "history_chat_einstein_philosophical",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+            "similarity_score": 0.34337713461635677,
+            "rank": 3,
+            "created_at": "2026-04-10T00:38:37.809882Z"
+          }
+        ]
+      },
+      {
+        "query_id": "q018_einstein_ai_question_text",
+        "query": "historical salon screenshot asking What do you think about AI today? with Einstein answering cautiously",
+        "expected_image_ids": [
+          "history_chat_einstein_ai"
+        ],
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "paraphrase",
+          "hard_negative"
+        ],
+        "hard_negative_image_ids": [
+          "history_chat_einstein_philosophical",
+          "history_chat_cleopatra_landing",
+          "history_chat_cleopatra_diplomacy"
+        ],
+        "error_bucket": "person-name confusion",
+        "top_results": [
+          {
+            "query_text": "historical salon screenshot asking What do you think about AI today? with Einstein answering cautiously",
+            "image_id": "history_chat_einstein_philosophical",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+            "similarity_score": 0.6282107269402687,
+            "rank": 1,
+            "created_at": "2026-04-10T00:38:38.701554Z"
+          },
+          {
+            "query_text": "historical salon screenshot asking What do you think about AI today? with Einstein answering cautiously",
+            "image_id": "history_chat_einstein_ai",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+            "similarity_score": 0.5962040777417712,
+            "rank": 2,
+            "created_at": "2026-04-10T00:38:38.701560Z"
+          },
+          {
+            "query_text": "historical salon screenshot asking What do you think about AI today? with Einstein answering cautiously",
+            "image_id": "history_chat_cleopatra_landing",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+            "similarity_score": 0.34650531776761967,
+            "rank": 3,
+            "created_at": "2026-04-10T00:38:38.701562Z"
+          }
+        ]
+      },
+      {
+        "query_id": "q019_einstein_discovery_question",
+        "query": "Albert Einstein interface answering What matters most in discovery?",
+        "expected_image_ids": [
+          "history_chat_einstein_philosophical"
+        ],
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "hard_negative"
+        ],
+        "hard_negative_image_ids": [
+          "history_chat_einstein_ai",
+          "history_chat_cleopatra_landing",
+          "history_chat_cleopatra_diplomacy"
+        ],
+        "error_bucket": "person-name confusion",
+        "top_results": [
+          {
+            "query_text": "Albert Einstein interface answering What matters most in discovery?",
+            "image_id": "history_chat_einstein_ai",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+            "similarity_score": 0.5536895873982762,
+            "rank": 1,
+            "created_at": "2026-04-10T00:38:38.911461Z"
+          },
+          {
+            "query_text": "Albert Einstein interface answering What matters most in discovery?",
+            "image_id": "history_chat_einstein_philosophical",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+            "similarity_score": 0.5317394310223615,
+            "rank": 2,
+            "created_at": "2026-04-10T00:38:38.911467Z"
+          },
+          {
+            "query_text": "Albert Einstein interface answering What matters most in discovery?",
+            "image_id": "history_chat_cleopatra_landing",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+            "similarity_score": 0.3298922953360156,
+            "rank": 3,
+            "created_at": "2026-04-10T00:38:38.911469Z"
+          }
+        ]
+      },
+      {
+        "query_id": "q022_cleopatra_landing_empty_transcript",
+        "query": "Cleopatra VII landing page with Converse with a historical mind not a costume and an empty conversation transcript",
+        "expected_image_ids": [
+          "history_chat_cleopatra_landing"
+        ],
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "layout_structure",
+          "hard_negative"
+        ],
+        "hard_negative_image_ids": [
+          "history_chat_cleopatra_diplomacy",
+          "history_chat_einstein_ai",
+          "history_chat_einstein_philosophical"
+        ],
+        "error_bucket": "person-name confusion",
+        "top_results": [
+          {
+            "query_text": "Cleopatra VII landing page with Converse with a historical mind not a costume and an empty conversation transcript",
+            "image_id": "history_chat_cleopatra_diplomacy",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+            "similarity_score": 0.6442966400334215,
+            "rank": 1,
+            "created_at": "2026-04-10T00:38:39.636015Z"
+          },
+          {
+            "query_text": "Cleopatra VII landing page with Converse with a historical mind not a costume and an empty conversation transcript",
+            "image_id": "history_chat_cleopatra_landing",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+            "similarity_score": 0.6208598717018243,
+            "rank": 2,
+            "created_at": "2026-04-10T00:38:39.636022Z"
+          },
+          {
+            "query_text": "Cleopatra VII landing page with Converse with a historical mind not a costume and an empty conversation transcript",
+            "image_id": "history_chat_einstein_philosophical",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+            "similarity_score": 0.4279732103487671,
+            "rank": 3,
+            "created_at": "2026-04-10T00:38:39.636024Z"
+          }
+        ]
+      },
+      {
+        "query_id": "q023_cleopatra_landing_cards",
+        "query": "historical salon startup screen for Cleopatra with 5-stage, Generate Verify, Multi-turn cards and no transcript yet",
+        "expected_image_ids": [
+          "history_chat_cleopatra_landing"
+        ],
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "layout_structure",
+          "hard_negative"
+        ],
+        "hard_negative_image_ids": [
+          "history_chat_cleopatra_diplomacy",
+          "history_chat_einstein_ai",
+          "history_chat_einstein_philosophical"
+        ],
+        "error_bucket": "person-name confusion",
+        "top_results": [
+          {
+            "query_text": "historical salon startup screen for Cleopatra with 5-stage, Generate Verify, Multi-turn cards and no transcript yet",
+            "image_id": "history_chat_cleopatra_diplomacy",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+            "similarity_score": 0.5017721469699112,
+            "rank": 1,
+            "created_at": "2026-04-10T00:38:39.831657Z"
+          },
+          {
+            "query_text": "historical salon startup screen for Cleopatra with 5-stage, Generate Verify, Multi-turn cards and no transcript yet",
+            "image_id": "history_chat_cleopatra_landing",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+            "similarity_score": 0.48750859326741786,
+            "rank": 2,
+            "created_at": "2026-04-10T00:38:39.831663Z"
+          },
+          {
+            "query_text": "historical salon startup screen for Cleopatra with 5-stage, Generate Verify, Multi-turn cards and no transcript yet",
+            "image_id": "history_chat_einstein_philosophical",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+            "similarity_score": 0.3970371739823925,
+            "rank": 3,
+            "created_at": "2026-04-10T00:38:39.831665Z"
+          }
+        ]
+      },
+      {
+        "query_id": "q025_cleopatra_diplomacy_transcript",
+        "query": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+        "expected_image_ids": [
+          "history_chat_cleopatra_diplomacy"
+        ],
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "hard_negative"
+        ],
+        "hard_negative_image_ids": [
+          "history_chat_cleopatra_landing",
+          "history_chat_einstein_ai",
+          "history_chat_einstein_philosophical"
+        ],
+        "error_bucket": "person-name confusion",
+        "top_results": [
+          {
+            "query_text": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+            "image_id": "history_chat_cleopatra_landing",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+            "similarity_score": 0.6664838925841733,
+            "rank": 1,
+            "created_at": "2026-04-10T00:38:40.365791Z"
+          },
+          {
+            "query_text": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+            "image_id": "history_chat_cleopatra_diplomacy",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+            "similarity_score": 0.6508442025091457,
+            "rank": 2,
+            "created_at": "2026-04-10T00:38:40.365796Z"
+          },
+          {
+            "query_text": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+            "image_id": "history_chat_einstein_philosophical",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+            "similarity_score": 0.4716537415591378,
+            "rank": 3,
+            "created_at": "2026-04-10T00:38:40.365798Z"
+          }
+        ]
+      },
+      {
+        "query_id": "q026_cleopatra_before_force",
+        "query": "Cleopatra transcript answering What should diplomacy achieve before force is used?",
+        "expected_image_ids": [
+          "history_chat_cleopatra_diplomacy"
+        ],
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "hard_negative"
+        ],
+        "hard_negative_image_ids": [
+          "history_chat_cleopatra_landing",
+          "history_chat_einstein_ai",
+          "history_chat_einstein_philosophical"
+        ],
+        "error_bucket": "person-name confusion",
+        "top_results": [
+          {
+            "query_text": "Cleopatra transcript answering What should diplomacy achieve before force is used?",
+            "image_id": "history_chat_cleopatra_landing",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+            "similarity_score": 0.4841268482851448,
+            "rank": 1,
+            "created_at": "2026-04-10T00:38:40.551331Z"
+          },
+          {
+            "query_text": "Cleopatra transcript answering What should diplomacy achieve before force is used?",
+            "image_id": "history_chat_cleopatra_diplomacy",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+            "similarity_score": 0.46166304315341167,
+            "rank": 2,
+            "created_at": "2026-04-10T00:38:40.551338Z"
+          },
+          {
+            "query_text": "Cleopatra transcript answering What should diplomacy achieve before force is used?",
+            "image_id": "history_chat_einstein_ai",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+            "similarity_score": 0.25009911261667817,
+            "rank": 3,
+            "created_at": "2026-04-10T00:38:40.551340Z"
+          }
+        ]
+      },
+      {
+        "query_id": "q027_cleopatra_statecraft_tags",
+        "query": "Cleopatra dossier with Leadership, Power, Diplomacy, Statecraft and a long answer about diplomacy before force",
+        "expected_image_ids": [
+          "history_chat_cleopatra_diplomacy"
+        ],
+        "tags": [
+          "ui_family_disambiguation",
+          "person_name",
+          "visible_text",
+          "partial_cue",
+          "hard_negative"
+        ],
+        "hard_negative_image_ids": [
+          "history_chat_cleopatra_landing",
+          "history_chat_einstein_ai",
+          "history_chat_einstein_philosophical"
+        ],
+        "error_bucket": "person-name confusion",
+        "top_results": [
+          {
+            "query_text": "Cleopatra dossier with Leadership, Power, Diplomacy, Statecraft and a long answer about diplomacy before force",
+            "image_id": "history_chat_cleopatra_landing",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+            "similarity_score": 0.6138543520289115,
+            "rank": 1,
+            "created_at": "2026-04-10T00:38:40.786797Z"
+          },
+          {
+            "query_text": "Cleopatra dossier with Leadership, Power, Diplomacy, Statecraft and a long answer about diplomacy before force",
+            "image_id": "history_chat_cleopatra_diplomacy",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+            "similarity_score": 0.5358756378307556,
+            "rank": 2,
+            "created_at": "2026-04-10T00:38:40.786804Z"
+          },
+          {
+            "query_text": "Cleopatra dossier with Leadership, Power, Diplomacy, Statecraft and a long answer about diplomacy before force",
+            "image_id": "history_chat_einstein_ai",
+            "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+            "similarity_score": 0.3094354520072417,
+            "rank": 3,
+            "created_at": "2026-04-10T00:38:40.786806Z"
+          }
+        ]
+      }
+    ]
+  },
+  "rerank_judgment": {
+    "recommendation": "defer_rerank_until_representation_fidelity_pass",
+    "rerank_signal_present": true,
+    "should_implement_lightweight_rerank_now": false,
+    "top1_miss_count": 9,
+    "top1_miss_with_expected_in_top3_count": 9,
+    "top1_miss_with_expected_in_top3_rate": 1.0,
+    "decision_rule": "If representation fidelity improves and top-3 still contains the expected image while top-1 remains frequently wrong, add a lightweight rerank stage.",
+    "current_read": "The top-3 rescue signal is worth tracking, but remaining errors are still treated as representation-fidelity failures before reranking work starts."
+  },
+  "queries": [
+    {
+      "query_id": "q001_cafe_phone_scene",
+      "query": "man sitting in a cozy cafe looking at his phone",
+      "expected_image_ids": [
+        "cafe_phone_person"
+      ],
+      "tags": [
+        "photo_scene"
+      ],
+      "hard_negative_image_ids": [],
+      "results": [
+        {
+          "query_text": "man sitting in a cozy cafe looking at his phone",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.6872452830911064,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:34.061496Z"
+        },
+        {
+          "query_text": "man sitting in a cozy cafe looking at his phone",
+          "image_id": "illustrated_couple_sofa",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/illustrated_couple_sofa.jpeg",
+          "similarity_score": 0.47237874024943366,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:34.061508Z"
+        },
+        {
+          "query_text": "man sitting in a cozy cafe looking at his phone",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.26094538857498284,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:34.061512Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q002_cafe_closed_sign",
+      "query": "cafe scene with a CLOSED sign by the door and a man holding a phone",
+      "expected_image_ids": [
+        "cafe_phone_person"
+      ],
+      "tags": [
+        "photo_scene",
+        "visible_text",
+        "partial_cue"
+      ],
+      "hard_negative_image_ids": [],
+      "results": [
+        {
+          "query_text": "cafe scene with a CLOSED sign by the door and a man holding a phone",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.5147393667981938,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:34.406446Z"
+        },
+        {
+          "query_text": "cafe scene with a CLOSED sign by the door and a man holding a phone",
+          "image_id": "illustrated_couple_sofa",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/illustrated_couple_sofa.jpeg",
+          "similarity_score": 0.3577811687288972,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:34.406455Z"
+        },
+        {
+          "query_text": "cafe scene with a CLOSED sign by the door and a man holding a phone",
+          "image_id": "night_riverside_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/night_riverside_person.jpeg",
+          "similarity_score": 0.28514771143635553,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:34.406457Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q003_cat_room_raised_bed",
+      "query": "indoor cat room with cats gathered on a wooden floor and one cat in a raised round bed",
+      "expected_image_ids": [
+        "indoor_many_cats"
+      ],
+      "tags": [
+        "photo_scene",
+        "partial_cue",
+        "paraphrase"
+      ],
+      "hard_negative_image_ids": [],
+      "results": [
+        {
+          "query_text": "indoor cat room with cats gathered on a wooden floor and one cat in a raised round bed",
+          "image_id": "indoor_many_cats",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/indoor_many_cats.jpeg",
+          "similarity_score": 0.730636414963277,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:34.635187Z"
+        },
+        {
+          "query_text": "indoor cat room with cats gathered on a wooden floor and one cat in a raised round bed",
+          "image_id": "illustrated_couple_sofa",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/illustrated_couple_sofa.jpeg",
+          "similarity_score": 0.34749140459400796,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:34.635218Z"
+        },
+        {
+          "query_text": "indoor cat room with cats gathered on a wooden floor and one cat in a raised round bed",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.2870494371384626,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:34.635228Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q004_night_riverside_partial",
+      "query": "blurred person in a black jacket on a grassy riverside slope after sunset",
+      "expected_image_ids": [
+        "night_riverside_person"
+      ],
+      "tags": [
+        "photo_scene",
+        "partial_cue",
+        "paraphrase"
+      ],
+      "hard_negative_image_ids": [],
+      "results": [
+        {
+          "query_text": "blurred person in a black jacket on a grassy riverside slope after sunset",
+          "image_id": "night_riverside_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/night_riverside_person.jpeg",
+          "similarity_score": 0.6835431625735674,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:34.859164Z"
+        },
+        {
+          "query_text": "blurred person in a black jacket on a grassy riverside slope after sunset",
+          "image_id": "outdoor_blanket_rest",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/outdoor_blanket_rest.jpeg",
+          "similarity_score": 0.37449991387205733,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:34.859174Z"
+        },
+        {
+          "query_text": "blurred person in a black jacket on a grassy riverside slope after sunset",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.27709727217030217,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:34.859177Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q005_blanket_patterned_mat",
+      "query": "resting on a colorful patterned mat with a gray blanket and dark hoodie",
+      "expected_image_ids": [
+        "outdoor_blanket_rest"
+      ],
+      "tags": [
+        "photo_scene",
+        "partial_cue",
+        "paraphrase"
+      ],
+      "hard_negative_image_ids": [],
+      "results": [
+        {
+          "query_text": "resting on a colorful patterned mat with a gray blanket and dark hoodie",
+          "image_id": "outdoor_blanket_rest",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/outdoor_blanket_rest.jpeg",
+          "similarity_score": 0.6864652026620345,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:35.200489Z"
+        },
+        {
+          "query_text": "resting on a colorful patterned mat with a gray blanket and dark hoodie",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.4028455386204878,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:35.200497Z"
+        },
+        {
+          "query_text": "resting on a colorful patterned mat with a gray blanket and dark hoodie",
+          "image_id": "illustrated_couple_sofa",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/illustrated_couple_sofa.jpeg",
+          "similarity_score": 0.3959093692590266,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:35.200499Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q006_cake_korean_message",
+      "query": "birthday cake with an avocado drawing, two candles, and Korean love message",
+      "expected_image_ids": [
+        "cake_korean_message"
+      ],
+      "tags": [
+        "photo_scene",
+        "visible_text"
+      ],
+      "hard_negative_image_ids": [],
+      "results": [
+        {
+          "query_text": "birthday cake with an avocado drawing, two candles, and Korean love message",
+          "image_id": "cake_korean_message",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cake_korean_message.jpeg",
+          "similarity_score": 0.6490400480037104,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:35.522436Z"
+        },
+        {
+          "query_text": "birthday cake with an avocado drawing, two candles, and Korean love message",
+          "image_id": "illustrated_couple_sofa",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/illustrated_couple_sofa.jpeg",
+          "similarity_score": 0.24100427000685948,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:35.522444Z"
+        },
+        {
+          "query_text": "birthday cake with an avocado drawing, two candles, and Korean love message",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.22576680588808692,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:35.522446Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q007_cake_miammiam_heart",
+      "query": "round cake with two lit candles and a heart sticker reading miammiam",
+      "expected_image_ids": [
+        "cake_korean_message"
+      ],
+      "tags": [
+        "photo_scene",
+        "visible_text",
+        "partial_cue"
+      ],
+      "hard_negative_image_ids": [],
+      "results": [
+        {
+          "query_text": "round cake with two lit candles and a heart sticker reading miammiam",
+          "image_id": "cake_korean_message",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cake_korean_message.jpeg",
+          "similarity_score": 0.6738214672591564,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:35.736746Z"
+        },
+        {
+          "query_text": "round cake with two lit candles and a heart sticker reading miammiam",
+          "image_id": "illustrated_couple_sofa",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/illustrated_couple_sofa.jpeg",
+          "similarity_score": 0.2223251432127771,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:35.736755Z"
+        },
+        {
+          "query_text": "round cake with two lit candles and a heart sticker reading miammiam",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.19825860700085915,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:35.736759Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q008_illustration_snowmen_moon",
+      "query": "illustration of a couple relaxing on a couch with snowmen outside the window and a yellow moon",
+      "expected_image_ids": [
+        "illustrated_couple_sofa"
+      ],
+      "tags": [
+        "illustration_style"
+      ],
+      "hard_negative_image_ids": [],
+      "results": [
+        {
+          "query_text": "illustration of a couple relaxing on a couch with snowmen outside the window and a yellow moon",
+          "image_id": "illustrated_couple_sofa",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/illustrated_couple_sofa.jpeg",
+          "similarity_score": 0.7646719581828563,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:36.088290Z"
+        },
+        {
+          "query_text": "illustration of a couple relaxing on a couch with snowmen outside the window and a yellow moon",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.3547935157171518,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:36.088297Z"
+        },
+        {
+          "query_text": "illustration of a couple relaxing on a couch with snowmen outside the window and a yellow moon",
+          "image_id": "outdoor_blanket_rest",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/outdoor_blanket_rest.jpeg",
+          "similarity_score": 0.34742128139871586,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:36.088300Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q009_illustration_drawn_living_room",
+      "query": "drawn living room scene with a black sofa, phone, snowmen outside, and a smiling moon",
+      "expected_image_ids": [
+        "illustrated_couple_sofa"
+      ],
+      "tags": [
+        "illustration_style",
+        "paraphrase",
+        "partial_cue"
+      ],
+      "hard_negative_image_ids": [],
+      "results": [
+        {
+          "query_text": "drawn living room scene with a black sofa, phone, snowmen outside, and a smiling moon",
+          "image_id": "illustrated_couple_sofa",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/illustrated_couple_sofa.jpeg",
+          "similarity_score": 0.6607874617568207,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:36.287387Z"
+        },
+        {
+          "query_text": "drawn living room scene with a black sofa, phone, snowmen outside, and a smiling moon",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.46410603392988803,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:36.287396Z"
+        },
+        {
+          "query_text": "drawn living room scene with a black sofa, phone, snowmen outside, and a smiling moon",
+          "image_id": "outdoor_blanket_rest",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/outdoor_blanket_rest.jpeg",
+          "similarity_score": 0.35536182140306966,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:36.287399Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q010_dashboard_dark_panels",
+      "query": "dark dashboard for visual storytelling from images and sentiment with file list, controls, image descriptions, and pipeline status",
+      "expected_image_ids": [
+        "visual_storytelling_dashboard"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "layout_structure",
+        "visible_text",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "visual_storytelling_mobile"
+      ],
+      "results": [
+        {
+          "query_text": "dark dashboard for visual storytelling from images and sentiment with file list, controls, image descriptions, and pipeline status",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.6636470898428298,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:36.609921Z"
+        },
+        {
+          "query_text": "dark dashboard for visual storytelling from images and sentiment with file list, controls, image descriptions, and pipeline status",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.6482584276529809,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:36.609933Z"
+        },
+        {
+          "query_text": "dark dashboard for visual storytelling from images and sentiment with file list, controls, image descriptions, and pipeline status",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.36731322553569157,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:36.609936Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q011_dashboard_analysis_panels",
+      "query": "dark visual storytelling UI with uploaded file list, scene observations, unresolved ambiguities, evaluator summary, and compliance scores",
+      "expected_image_ids": [
+        "visual_storytelling_dashboard"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "visible_text",
+        "layout_structure",
+        "partial_cue",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "visual_storytelling_mobile"
+      ],
+      "results": [
+        {
+          "query_text": "dark visual storytelling UI with uploaded file list, scene observations, unresolved ambiguities, evaluator summary, and compliance scores",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.6608419370212723,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:36.931882Z"
+        },
+        {
+          "query_text": "dark visual storytelling UI with uploaded file list, scene observations, unresolved ambiguities, evaluator summary, and compliance scores",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.6078857428086626,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:36.931889Z"
+        },
+        {
+          "query_text": "dark visual storytelling UI with uploaded file list, scene observations, unresolved ambiguities, evaluator summary, and compliance scores",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.44043729799348436,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:36.931891Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q012_dashboard_slider_file_sizes",
+      "query": "desktop storytelling dashboard with file sizes, happy sad suspenseful radio buttons, max sentences slider, and orange Generate Story button",
+      "expected_image_ids": [
+        "visual_storytelling_dashboard"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "visible_text",
+        "layout_structure",
+        "partial_cue",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "visual_storytelling_mobile"
+      ],
+      "results": [
+        {
+          "query_text": "desktop storytelling dashboard with file sizes, happy sad suspenseful radio buttons, max sentences slider, and orange Generate Story button",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.6599775779004599,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:37.147451Z"
+        },
+        {
+          "query_text": "desktop storytelling dashboard with file sizes, happy sad suspenseful radio buttons, max sentences slider, and orange Generate Story button",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.6310520088632653,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:37.147458Z"
+        },
+        {
+          "query_text": "desktop storytelling dashboard with file sizes, happy sad suspenseful radio buttons, max sentences slider, and orange Generate Story button",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.3878963995095175,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:37.147461Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q013_mobile_stacked_cards",
+      "query": "mobile landing page for visual storytelling from sentiment with stacked beige cards and orange buttons",
+      "expected_image_ids": [
+        "visual_storytelling_mobile"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "layout_structure",
+        "paraphrase",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "visual_storytelling_dashboard"
+      ],
+      "results": [
+        {
+          "query_text": "mobile landing page for visual storytelling from sentiment with stacked beige cards and orange buttons",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.6046373319573274,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:37.480869Z"
+        },
+        {
+          "query_text": "mobile landing page for visual storytelling from sentiment with stacked beige cards and orange buttons",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.5600655526296321,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:37.480874Z"
+        },
+        {
+          "query_text": "mobile landing page for visual storytelling from sentiment with stacked beige cards and orange buttons",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.3090865659103088,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:37.480876Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q014_mobile_awaiting_sequence",
+      "query": "vertical beige interface with AWAITING IMAGE SEQUENCE and Your story will appear here",
+      "expected_image_ids": [
+        "visual_storytelling_mobile"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "visible_text",
+        "layout_structure",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "visual_storytelling_dashboard"
+      ],
+      "results": [
+        {
+          "query_text": "vertical beige interface with AWAITING IMAGE SEQUENCE and Your story will appear here",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.5318414338519118,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:37.809872Z"
+        },
+        {
+          "query_text": "vertical beige interface with AWAITING IMAGE SEQUENCE and Your story will appear here",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.5043024035966968,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:37.809879Z"
+        },
+        {
+          "query_text": "vertical beige interface with AWAITING IMAGE SEQUENCE and Your story will appear here",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.34337713461635677,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:37.809882Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q015_mobile_drop_file",
+      "query": "soft beige mobile panel with Drop File Here, Click to Upload, Story follows image order, and sequence preview",
+      "expected_image_ids": [
+        "visual_storytelling_mobile"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "visible_text",
+        "layout_structure",
+        "partial_cue",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "visual_storytelling_dashboard"
+      ],
+      "results": [
+        {
+          "query_text": "soft beige mobile panel with Drop File Here, Click to Upload, Story follows image order, and sequence preview",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.5411336340940369,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:37.994468Z"
+        },
+        {
+          "query_text": "soft beige mobile panel with Drop File Here, Click to Upload, Story follows image order, and sequence preview",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.5205330622002283,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:37.994474Z"
+        },
+        {
+          "query_text": "soft beige mobile panel with Drop File Here, Click to Upload, Story follows image order, and sequence preview",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.3453487298677989,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:37.994476Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q016_einstein_ai_today",
+      "query": "historical salon interface with Albert Einstein discussing AI today and responsibility",
+      "expected_image_ids": [
+        "history_chat_einstein_ai"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "person_name",
+        "visible_text",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "history_chat_einstein_philosophical",
+        "history_chat_cleopatra_landing",
+        "history_chat_cleopatra_diplomacy"
+      ],
+      "results": [
+        {
+          "query_text": "historical salon interface with Albert Einstein discussing AI today and responsibility",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.6678927437498053,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:38.187902Z"
+        },
+        {
+          "query_text": "historical salon interface with Albert Einstein discussing AI today and responsibility",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.6624169947284705,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:38.187908Z"
+        },
+        {
+          "query_text": "historical salon interface with Albert Einstein discussing AI today and responsibility",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.3750047822605065,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:38.187910Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q017_einstein_posthumous_current_events",
+      "query": "Albert Einstein interface where the latest pipeline result says posthumous current events and cautious historical projection",
+      "expected_image_ids": [
+        "history_chat_einstein_ai"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "person_name",
+        "visible_text",
+        "layout_structure",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "history_chat_einstein_philosophical",
+        "history_chat_cleopatra_landing",
+        "history_chat_cleopatra_diplomacy"
+      ],
+      "results": [
+        {
+          "query_text": "Albert Einstein interface where the latest pipeline result says posthumous current events and cautious historical projection",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.5741641503619946,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:38.516153Z"
+        },
+        {
+          "query_text": "Albert Einstein interface where the latest pipeline result says posthumous current events and cautious historical projection",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.5556976186598742,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:38.516159Z"
+        },
+        {
+          "query_text": "Albert Einstein interface where the latest pipeline result says posthumous current events and cautious historical projection",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.38734138065373547,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:38.516161Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q018_einstein_ai_question_text",
+      "query": "historical salon screenshot asking What do you think about AI today? with Einstein answering cautiously",
+      "expected_image_ids": [
+        "history_chat_einstein_ai"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "person_name",
+        "visible_text",
+        "paraphrase",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "history_chat_einstein_philosophical",
+        "history_chat_cleopatra_landing",
+        "history_chat_cleopatra_diplomacy"
+      ],
+      "results": [
+        {
+          "query_text": "historical salon screenshot asking What do you think about AI today? with Einstein answering cautiously",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.6282107269402687,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:38.701554Z"
+        },
+        {
+          "query_text": "historical salon screenshot asking What do you think about AI today? with Einstein answering cautiously",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.5962040777417712,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:38.701560Z"
+        },
+        {
+          "query_text": "historical salon screenshot asking What do you think about AI today? with Einstein answering cautiously",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.34650531776761967,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:38.701562Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q019_einstein_discovery_question",
+      "query": "Albert Einstein interface answering What matters most in discovery?",
+      "expected_image_ids": [
+        "history_chat_einstein_philosophical"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "person_name",
+        "visible_text",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "history_chat_einstein_ai",
+        "history_chat_cleopatra_landing",
+        "history_chat_cleopatra_diplomacy"
+      ],
+      "results": [
+        {
+          "query_text": "Albert Einstein interface answering What matters most in discovery?",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.5536895873982762,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:38.911461Z"
+        },
+        {
+          "query_text": "Albert Einstein interface answering What matters most in discovery?",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.5317394310223615,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:38.911467Z"
+        },
+        {
+          "query_text": "Albert Einstein interface answering What matters most in discovery?",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.3298922953360156,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:38.911469Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q020_einstein_reflective_opinion",
+      "query": "Einstein historical salon screen with question type philosophical and answer mode reflective opinion",
+      "expected_image_ids": [
+        "history_chat_einstein_philosophical"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "person_name",
+        "visible_text",
+        "layout_structure",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "history_chat_einstein_ai",
+        "history_chat_cleopatra_landing",
+        "history_chat_cleopatra_diplomacy"
+      ],
+      "results": [
+        {
+          "query_text": "Einstein historical salon screen with question type philosophical and answer mode reflective opinion",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.6203551777729609,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:39.126754Z"
+        },
+        {
+          "query_text": "Einstein historical salon screen with question type philosophical and answer mode reflective opinion",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.6181140151378023,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:39.126761Z"
+        },
+        {
+          "query_text": "Einstein historical salon screen with question type philosophical and answer mode reflective opinion",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.42018970635178166,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:39.126763Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q021_einstein_discovery_paraphrase",
+      "query": "beige editorial AI chat about imagination and discovery rather than AI today",
+      "expected_image_ids": [
+        "history_chat_einstein_philosophical"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "person_name",
+        "paraphrase",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "history_chat_einstein_ai",
+        "history_chat_cleopatra_landing",
+        "history_chat_cleopatra_diplomacy"
+      ],
+      "results": [
+        {
+          "query_text": "beige editorial AI chat about imagination and discovery rather than AI today",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.505185647208803,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:39.440730Z"
+        },
+        {
+          "query_text": "beige editorial AI chat about imagination and discovery rather than AI today",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.49585731010315137,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:39.440739Z"
+        },
+        {
+          "query_text": "beige editorial AI chat about imagination and discovery rather than AI today",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.3742162187164423,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:39.440743Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q022_cleopatra_landing_empty_transcript",
+      "query": "Cleopatra VII landing page with Converse with a historical mind not a costume and an empty conversation transcript",
+      "expected_image_ids": [
+        "history_chat_cleopatra_landing"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "person_name",
+        "visible_text",
+        "layout_structure",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "history_chat_cleopatra_diplomacy",
+        "history_chat_einstein_ai",
+        "history_chat_einstein_philosophical"
+      ],
+      "results": [
+        {
+          "query_text": "Cleopatra VII landing page with Converse with a historical mind not a costume and an empty conversation transcript",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.6442966400334215,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:39.636015Z"
+        },
+        {
+          "query_text": "Cleopatra VII landing page with Converse with a historical mind not a costume and an empty conversation transcript",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.6208598717018243,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:39.636022Z"
+        },
+        {
+          "query_text": "Cleopatra VII landing page with Converse with a historical mind not a costume and an empty conversation transcript",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.4279732103487671,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:39.636024Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q023_cleopatra_landing_cards",
+      "query": "historical salon startup screen for Cleopatra with 5-stage, Generate Verify, Multi-turn cards and no transcript yet",
+      "expected_image_ids": [
+        "history_chat_cleopatra_landing"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "person_name",
+        "visible_text",
+        "layout_structure",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "history_chat_cleopatra_diplomacy",
+        "history_chat_einstein_ai",
+        "history_chat_einstein_philosophical"
+      ],
+      "results": [
+        {
+          "query_text": "historical salon startup screen for Cleopatra with 5-stage, Generate Verify, Multi-turn cards and no transcript yet",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.5017721469699112,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:39.831657Z"
+        },
+        {
+          "query_text": "historical salon startup screen for Cleopatra with 5-stage, Generate Verify, Multi-turn cards and no transcript yet",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.48750859326741786,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:39.831663Z"
+        },
+        {
+          "query_text": "historical salon startup screen for Cleopatra with 5-stage, Generate Verify, Multi-turn cards and no transcript yet",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.3970371739823925,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:39.831665Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q024_cleopatra_landing_starter_prompts",
+      "query": "Cleopatra interface with starter prompts about durable under pressure, image and power, and diplomacy before force",
+      "expected_image_ids": [
+        "history_chat_cleopatra_landing"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "person_name",
+        "visible_text",
+        "partial_cue",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "history_chat_cleopatra_diplomacy",
+        "history_chat_einstein_ai",
+        "history_chat_einstein_philosophical"
+      ],
+      "results": [
+        {
+          "query_text": "Cleopatra interface with starter prompts about durable under pressure, image and power, and diplomacy before force",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.6826540427594361,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:40.030851Z"
+        },
+        {
+          "query_text": "Cleopatra interface with starter prompts about durable under pressure, image and power, and diplomacy before force",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.6438150816080517,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:40.030856Z"
+        },
+        {
+          "query_text": "Cleopatra interface with starter prompts about durable under pressure, image and power, and diplomacy before force",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.4133459653802387,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:40.030858Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q025_cleopatra_diplomacy_transcript",
+      "query": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+      "expected_image_ids": [
+        "history_chat_cleopatra_diplomacy"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "person_name",
+        "visible_text",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "history_chat_cleopatra_landing",
+        "history_chat_einstein_ai",
+        "history_chat_einstein_philosophical"
+      ],
+      "results": [
+        {
+          "query_text": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.6664838925841733,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:40.365791Z"
+        },
+        {
+          "query_text": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.6508442025091457,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:40.365796Z"
+        },
+        {
+          "query_text": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.4716537415591378,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:40.365798Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q026_cleopatra_before_force",
+      "query": "Cleopatra transcript answering What should diplomacy achieve before force is used?",
+      "expected_image_ids": [
+        "history_chat_cleopatra_diplomacy"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "person_name",
+        "visible_text",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "history_chat_cleopatra_landing",
+        "history_chat_einstein_ai",
+        "history_chat_einstein_philosophical"
+      ],
+      "results": [
+        {
+          "query_text": "Cleopatra transcript answering What should diplomacy achieve before force is used?",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.4841268482851448,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:40.551331Z"
+        },
+        {
+          "query_text": "Cleopatra transcript answering What should diplomacy achieve before force is used?",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.46166304315341167,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:40.551338Z"
+        },
+        {
+          "query_text": "Cleopatra transcript answering What should diplomacy achieve before force is used?",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.25009911261667817,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:40.551340Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q027_cleopatra_statecraft_tags",
+      "query": "Cleopatra dossier with Leadership, Power, Diplomacy, Statecraft and a long answer about diplomacy before force",
+      "expected_image_ids": [
+        "history_chat_cleopatra_diplomacy"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "person_name",
+        "visible_text",
+        "partial_cue",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "history_chat_cleopatra_landing",
+        "history_chat_einstein_ai",
+        "history_chat_einstein_philosophical"
+      ],
+      "results": [
+        {
+          "query_text": "Cleopatra dossier with Leadership, Power, Diplomacy, Statecraft and a long answer about diplomacy before force",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.6138543520289115,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:40.786797Z"
+        },
+        {
+          "query_text": "Cleopatra dossier with Leadership, Power, Diplomacy, Statecraft and a long answer about diplomacy before force",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.5358756378307556,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:40.786804Z"
+        },
+        {
+          "query_text": "Cleopatra dossier with Leadership, Power, Diplomacy, Statecraft and a long answer about diplomacy before force",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.3094354520072417,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:40.786806Z"
+        }
+      ]
+    },
+    {
+      "query_id": "q028_cleopatra_transcript_not_landing",
+      "query": "soft beige transcript app with Cleopatra giving a detailed diplomatic answer rather than a landing screen",
+      "expected_image_ids": [
+        "history_chat_cleopatra_diplomacy"
+      ],
+      "tags": [
+        "ui_family_disambiguation",
+        "person_name",
+        "layout_structure",
+        "paraphrase",
+        "hard_negative"
+      ],
+      "hard_negative_image_ids": [
+        "history_chat_cleopatra_landing",
+        "history_chat_einstein_ai",
+        "history_chat_einstein_philosophical"
+      ],
+      "results": [
+        {
+          "query_text": "soft beige transcript app with Cleopatra giving a detailed diplomatic answer rather than a landing screen",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.5765289099511438,
+          "rank": 1,
+          "created_at": "2026-04-10T00:38:41.114471Z"
+        },
+        {
+          "query_text": "soft beige transcript app with Cleopatra giving a detailed diplomatic answer rather than a landing screen",
+          "image_id": "history_chat_cleopatra_landing",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_landing.png",
+          "similarity_score": 0.5099886682868164,
+          "rank": 2,
+          "created_at": "2026-04-10T00:38:41.114478Z"
+        },
+        {
+          "query_text": "soft beige transcript app with Cleopatra giving a detailed diplomatic answer rather than a landing screen",
+          "image_id": "history_chat_einstein_philosophical",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_philosophical.png",
+          "similarity_score": 0.48230504154713055,
+          "rank": 3,
+          "created_at": "2026-04-10T00:38:41.114480Z"
+        }
+      ]
+    }
+  ]
+}

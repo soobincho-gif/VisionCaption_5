@@ -1,0 +1,7 @@
+altair>=5.4,<6
+openai
+pandas>=2.2,<3
+pillow>=10,<12
+pydantic
+pydantic-settings
+streamlit>=1.42,<2

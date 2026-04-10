@@ -1,0 +1,349 @@
+{
+  "caption_summary": {
+    "status": "completed",
+    "image_dir": "data/samples/prompt_fidelity/images",
+    "images_discovered": 10,
+    "images_skipped_existing": 0,
+    "captions_written": 10,
+    "caption_output_path": "outputs/eval/prompt_fidelity/retrieval_oriented_v2/captions.jsonl",
+    "prompt_variant": "retrieval_oriented_v2",
+    "errors": [],
+    "model_name": "gpt-4.1-mini"
+  },
+  "embedding_summary": {
+    "status": "completed",
+    "captions_available": 10,
+    "captions_skipped_existing": 0,
+    "captions_selected_for_run": 10,
+    "embeddings_written": 10,
+    "embedding_dimensions": 1536,
+    "caption_input_path": "outputs/eval/prompt_fidelity/retrieval_oriented_v2/captions.jsonl",
+    "embedding_output_path": "outputs/eval/prompt_fidelity/retrieval_oriented_v2/embeddings.jsonl",
+    "model_name": "text-embedding-3-small",
+    "errors": []
+  },
+  "recall_at_1": 1.0,
+  "recall_at_3": 1.0,
+  "queries": [
+    {
+      "query": "man sitting in a cozy cafe looking at his phone",
+      "expected_image_ids": [
+        "cafe_phone_person"
+      ],
+      "results": [
+        {
+          "query_text": "man sitting in a cozy cafe looking at his phone",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.6908532382114784,
+          "rank": 1,
+          "created_at": "2026-04-09T08:32:08.248867Z"
+        },
+        {
+          "query_text": "man sitting in a cozy cafe looking at his phone",
+          "image_id": "illustrated_couple_sofa",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/illustrated_couple_sofa.jpeg",
+          "similarity_score": 0.386928249357499,
+          "rank": 2,
+          "created_at": "2026-04-09T08:32:08.248878Z"
+        },
+        {
+          "query_text": "man sitting in a cozy cafe looking at his phone",
+          "image_id": "night_riverside_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/night_riverside_person.jpeg",
+          "similarity_score": 0.278298552661309,
+          "rank": 3,
+          "created_at": "2026-04-09T08:32:08.248882Z"
+        }
+      ]
+    },
+    {
+      "query": "many cats gathered indoors on a wooden floor",
+      "expected_image_ids": [
+        "indoor_many_cats"
+      ],
+      "results": [
+        {
+          "query_text": "many cats gathered indoors on a wooden floor",
+          "image_id": "indoor_many_cats",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/indoor_many_cats.jpeg",
+          "similarity_score": 0.7114649137355739,
+          "rank": 1,
+          "created_at": "2026-04-09T08:32:08.442500Z"
+        },
+        {
+          "query_text": "many cats gathered indoors on a wooden floor",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.29970787600674004,
+          "rank": 2,
+          "created_at": "2026-04-09T08:32:08.442509Z"
+        },
+        {
+          "query_text": "many cats gathered indoors on a wooden floor",
+          "image_id": "illustrated_couple_sofa",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/illustrated_couple_sofa.jpeg",
+          "similarity_score": 0.2934060747436748,
+          "rank": 3,
+          "created_at": "2026-04-09T08:32:08.442513Z"
+        }
+      ]
+    },
+    {
+      "query": "person standing outside at night near city lights",
+      "expected_image_ids": [
+        "night_riverside_person"
+      ],
+      "results": [
+        {
+          "query_text": "person standing outside at night near city lights",
+          "image_id": "night_riverside_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/night_riverside_person.jpeg",
+          "similarity_score": 0.6149414851259934,
+          "rank": 1,
+          "created_at": "2026-04-09T08:32:08.858221Z"
+        },
+        {
+          "query_text": "person standing outside at night near city lights",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.27440111581570625,
+          "rank": 2,
+          "created_at": "2026-04-09T08:32:08.858231Z"
+        },
+        {
+          "query_text": "person standing outside at night near city lights",
+          "image_id": "outdoor_blanket_rest",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/outdoor_blanket_rest.jpeg",
+          "similarity_score": 0.25644520567397183,
+          "rank": 3,
+          "created_at": "2026-04-09T08:32:08.858234Z"
+        }
+      ]
+    },
+    {
+      "query": "person lying outdoors on a mat wrapped in a blanket",
+      "expected_image_ids": [
+        "outdoor_blanket_rest"
+      ],
+      "results": [
+        {
+          "query_text": "person lying outdoors on a mat wrapped in a blanket",
+          "image_id": "outdoor_blanket_rest",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/outdoor_blanket_rest.jpeg",
+          "similarity_score": 0.6752812800438638,
+          "rank": 1,
+          "created_at": "2026-04-09T08:32:09.187073Z"
+        },
+        {
+          "query_text": "person lying outdoors on a mat wrapped in a blanket",
+          "image_id": "night_riverside_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/night_riverside_person.jpeg",
+          "similarity_score": 0.36797426559125984,
+          "rank": 2,
+          "created_at": "2026-04-09T08:32:09.187081Z"
+        },
+        {
+          "query_text": "person lying outdoors on a mat wrapped in a blanket",
+          "image_id": "illustrated_couple_sofa",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/illustrated_couple_sofa.jpeg",
+          "similarity_score": 0.3147328789417449,
+          "rank": 3,
+          "created_at": "2026-04-09T08:32:09.187085Z"
+        }
+      ]
+    },
+    {
+      "query": "birthday cake with an avocado drawing, two candles, and Korean love message",
+      "expected_image_ids": [
+        "cake_korean_message"
+      ],
+      "results": [
+        {
+          "query_text": "birthday cake with an avocado drawing, two candles, and Korean love message",
+          "image_id": "cake_korean_message",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cake_korean_message.jpeg",
+          "similarity_score": 0.5931978943136071,
+          "rank": 1,
+          "created_at": "2026-04-09T08:32:09.519002Z"
+        },
+        {
+          "query_text": "birthday cake with an avocado drawing, two candles, and Korean love message",
+          "image_id": "illustrated_couple_sofa",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/illustrated_couple_sofa.jpeg",
+          "similarity_score": 0.25915142249685835,
+          "rank": 2,
+          "created_at": "2026-04-09T08:32:09.519011Z"
+        },
+        {
+          "query_text": "birthday cake with an avocado drawing, two candles, and Korean love message",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.23104230343770632,
+          "rank": 3,
+          "created_at": "2026-04-09T08:32:09.519014Z"
+        }
+      ]
+    },
+    {
+      "query": "illustration of a couple relaxing on a couch with snowmen outside the window and a yellow moon",
+      "expected_image_ids": [
+        "illustrated_couple_sofa"
+      ],
+      "results": [
+        {
+          "query_text": "illustration of a couple relaxing on a couch with snowmen outside the window and a yellow moon",
+          "image_id": "illustrated_couple_sofa",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/illustrated_couple_sofa.jpeg",
+          "similarity_score": 0.6272104795812182,
+          "rank": 1,
+          "created_at": "2026-04-09T08:32:09.855882Z"
+        },
+        {
+          "query_text": "illustration of a couple relaxing on a couch with snowmen outside the window and a yellow moon",
+          "image_id": "outdoor_blanket_rest",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/outdoor_blanket_rest.jpeg",
+          "similarity_score": 0.40249562365377906,
+          "rank": 2,
+          "created_at": "2026-04-09T08:32:09.855892Z"
+        },
+        {
+          "query_text": "illustration of a couple relaxing on a couch with snowmen outside the window and a yellow moon",
+          "image_id": "cafe_phone_person",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/cafe_phone_person.jpeg",
+          "similarity_score": 0.38271421377083753,
+          "rank": 3,
+          "created_at": "2026-04-09T08:32:09.855896Z"
+        }
+      ]
+    },
+    {
+      "query": "dark dashboard for visual storytelling from images and sentiment with file list, controls, image descriptions, and pipeline status",
+      "expected_image_ids": [
+        "visual_storytelling_dashboard"
+      ],
+      "results": [
+        {
+          "query_text": "dark dashboard for visual storytelling from images and sentiment with file list, controls, image descriptions, and pipeline status",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.6333767776319782,
+          "rank": 1,
+          "created_at": "2026-04-09T08:32:10.211269Z"
+        },
+        {
+          "query_text": "dark dashboard for visual storytelling from images and sentiment with file list, controls, image descriptions, and pipeline status",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.6169183178168175,
+          "rank": 2,
+          "created_at": "2026-04-09T08:32:10.211278Z"
+        },
+        {
+          "query_text": "dark dashboard for visual storytelling from images and sentiment with file list, controls, image descriptions, and pipeline status",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.4032867010750792,
+          "rank": 3,
+          "created_at": "2026-04-09T08:32:10.211281Z"
+        }
+      ]
+    },
+    {
+      "query": "mobile landing page for visual storytelling from sentiment with stacked cards and orange buttons",
+      "expected_image_ids": [
+        "visual_storytelling_mobile"
+      ],
+      "results": [
+        {
+          "query_text": "mobile landing page for visual storytelling from sentiment with stacked cards and orange buttons",
+          "image_id": "visual_storytelling_mobile",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_mobile.png",
+          "similarity_score": 0.5611428637407789,
+          "rank": 1,
+          "created_at": "2026-04-09T08:32:10.561784Z"
+        },
+        {
+          "query_text": "mobile landing page for visual storytelling from sentiment with stacked cards and orange buttons",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.5428205563384199,
+          "rank": 2,
+          "created_at": "2026-04-09T08:32:10.561787Z"
+        },
+        {
+          "query_text": "mobile landing page for visual storytelling from sentiment with stacked cards and orange buttons",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.31058919000720603,
+          "rank": 3,
+          "created_at": "2026-04-09T08:32:10.561789Z"
+        }
+      ]
+    },
+    {
+      "query": "historical salon interface with Albert Einstein discussing AI today and responsibility",
+      "expected_image_ids": [
+        "history_chat_einstein_ai"
+      ],
+      "results": [
+        {
+          "query_text": "historical salon interface with Albert Einstein discussing AI today and responsibility",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.6609521773508378,
+          "rank": 1,
+          "created_at": "2026-04-09T08:32:10.773278Z"
+        },
+        {
+          "query_text": "historical salon interface with Albert Einstein discussing AI today and responsibility",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.34488880251933823,
+          "rank": 2,
+          "created_at": "2026-04-09T08:32:10.773286Z"
+        },
+        {
+          "query_text": "historical salon interface with Albert Einstein discussing AI today and responsibility",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.2657142410336682,
+          "rank": 3,
+          "created_at": "2026-04-09T08:32:10.773290Z"
+        }
+      ]
+    },
+    {
+      "query": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+      "expected_image_ids": [
+        "history_chat_cleopatra_diplomacy"
+      ],
+      "results": [
+        {
+          "query_text": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+          "image_id": "history_chat_cleopatra_diplomacy",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_cleopatra_diplomacy.png",
+          "similarity_score": 0.6344296763593538,
+          "rank": 1,
+          "created_at": "2026-04-09T08:32:10.969813Z"
+        },
+        {
+          "query_text": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+          "image_id": "history_chat_einstein_ai",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/history_chat_einstein_ai.png",
+          "similarity_score": 0.39575504021401936,
+          "rank": 2,
+          "created_at": "2026-04-09T08:32:10.969824Z"
+        },
+        {
+          "query_text": "historical salon interface with Cleopatra answering diplomacy questions in a long transcript",
+          "image_id": "visual_storytelling_dashboard",
+          "image_path": "/Users/sarahc/Downloads/VisionCaption_5/data/samples/prompt_fidelity/images/visual_storytelling_dashboard.png",
+          "similarity_score": 0.22416047112004242,
+          "rank": 3,
+          "created_at": "2026-04-09T08:32:10.969828Z"
+        }
+      ]
+    }
+  ]
+}
