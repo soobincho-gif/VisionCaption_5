@@ -36,7 +36,8 @@ app.py
 - The UI expects the frozen artifacts already committed in `outputs/eval/`
 - Demo interactions do not require a network embedding rebuild
 - `.streamlit/config.toml` includes the app theme and server defaults
-- `.streamlit/secrets.toml` is optional for this portfolio UI because the app does not call the embedding API during replay mode
+- `.streamlit/secrets.toml` is optional for frozen replay mode
+- Upload, caption, and temporary embedding flows require `OPENAI_API_KEY`
 
 ## Current Validated Default Configuration
 
@@ -71,6 +72,27 @@ requirements.txt
 1. Push this repository to GitHub.
 2. In Streamlit Community Cloud, create a new app from the repo.
 3. Set the main file path to `app.py`.
-4. Deploy without enabling any live rebuild path.
+4. In Advanced settings, keep Python at `3.12` unless you have a reason to change it.
+5. Optional: if you want upload and temporary caption/embed features, paste the contents of `.streamlit/secrets.toml.example` into the Secrets field after replacing the key value.
+6. Deploy without enabling any live rebuild path.
 
 The portfolio app will boot directly from the checked-in frozen artifacts.
+
+## Deploy Checklist
+
+- Repository: `soobincho-gif/VisionCaption_5`
+- Branch: `main`
+- Entrypoint: `app.py`
+- Python: `3.12`
+- Secrets: optional for frozen replay, required only for upload/caption/embed flows
+- Dependency file: `requirements.txt`
+
+## Optional Local Secrets
+
+If you want to test the upload flow locally, create `.streamlit/secrets.toml` from the example file:
+
+```toml
+OPENAI_API_KEY = "sk-your-openai-key"
+```
+
+Do not commit `.streamlit/secrets.toml`. The repository ignores it by default.

@@ -1,7 +1,7 @@
 altair>=5.4,<6
-openai
+openai>=1,<2
 pandas>=2.2,<3
 pillow>=10,<12
-pydantic
-pydantic-settings
+pydantic>=2,<3
+pydantic-settings>=2,<3
 streamlit>=1.42,<2
